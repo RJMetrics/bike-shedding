@@ -12,11 +12,11 @@ Hi, thanks for your interest in our Front End Engineering position. As part of t
 
 ### Your project should
 1. Load data via an asynchronous request in a web browser using javascript
-2. Display a visual chart displaying the data or an aggregation of the data.
-3. Display some or all of the raw data in a table.
+2. Display a visual chart displaying the data or an aggregation of the data
+3. Display some or all of the raw data in a table
 4. Have 2 or more ways you can interact with the data (ie. hover, click, etc.)
 5. Be viewable in the latest versions of Chrome and Firefox
-6. Display a question about the data that your chart tries to answer.
+6. Display a question about the data that your chart tries to answer
 
 ### You should
 1. Use any javascript libraries or frameworks you want
