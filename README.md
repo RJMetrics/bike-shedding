@@ -5,10 +5,12 @@ Create a simple bike sharing data dashboard
 Hi, thanks for your interest in our Front End Engineering position. As part of the interview process we'd like you to build a simple dashboard with Indego bike sharing data.
 
 # Steps
-1. Fork this repo to your personal github profile
+1. Fork this repo to your personal GitHub profile
 2. Clone this repo to your computer
-3. Visit [Indego's ride sharing data](https://www.rideindego.com/about/data/) site and download one of the datasets.
-4. Use front end web technologies to build a chart and answer a question about the data.
+3. Visit [Indego's ride sharing data](https://www.rideindego.com/about/data/) site and download one of the datasets
+4. Use front end web technologies to build a chart and answer a question about the data
+5. Add to the bottom of this README file details what needs to be done to view your project locally
+6. Make a pull request for us to review your code
 
 ### Your project should
 1. Load data via an asynchronous request in a web browser using javascript
@@ -21,9 +23,6 @@ Hi, thanks for your interest in our Front End Engineering position. As part of t
 ### You should
 1. Use any javascript libraries or frameworks you want
 2. Write all your own html/css
-3. Send us back a link to your forked repo
-4. Include a README file that details what needs to be done to view your project locally
-
 
 ### It's not required, but your project can
 1. Use other languages that compile to javascript (Typescript, Coffeescript, Clojurescript, etc.)
