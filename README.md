@@ -22,7 +22,7 @@ Hi, thanks for your interest in our Front End Engineering position. As part of t
 
 ### You should
 1. Use any javascript libraries or frameworks you want
-2. Write all your own html/css
+2. Write some or all of your own html/css
 
 ### It's not required, but your project can
 1. Use other languages that compile to javascript (Typescript, Coffeescript, Clojurescript, etc.)
