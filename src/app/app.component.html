@@ -5,3 +5,41 @@
       Bike Sharing Data Dashboard
     </a>
   </nav>
+
+  <div class="example-container mat-elevation-z8">
+    <div class="example-header">
+      <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+    </div>
+  
+    <mat-table #table [dataSource]="dataSource">
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="bike_id">
+        <mat-header-cell *matHeaderCellDef> Bike ID </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.bike_id}} </mat-cell>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="trip_id">
+        <mat-header-cell *matHeaderCellDef> Trip ID </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.trip_id}} </mat-cell>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="start_time">
+        <mat-header-cell *matHeaderCellDef> Start Time </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.start_time}} </mat-cell>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="end_time">
+        <mat-header-cell *matHeaderCellDef> End Time </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.end_time}} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
