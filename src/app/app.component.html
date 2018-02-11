@@ -1,10 +1,17 @@
-<!-- Image and text -->
+<html>
+  <script>
+    <link rel="stylesheet" href="fonts.googleapis.com/icon?family=Material+Icons"/>
+  </script>
+<header>
+<!-- Title -->
 <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="#">
-      <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
       Bike Sharing Data Dashboard
     </a>
   </nav>
+</header>  
+
+<body>
 
   <div class="example-container mat-elevation-z8">
     <div class="example-header">
@@ -15,30 +22,42 @@
   
     <mat-table #table [dataSource]="dataSource">
   
-      <!-- Position Column -->
+      <!-- Bike ID Column -->
       <ng-container matColumnDef="bike_id">
-        <mat-header-cell *matHeaderCellDef> Bike ID </mat-header-cell>
+        <mat-header-cell *matHeaderCellDef class= "header"> Bike ID </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.bike_id}} </mat-cell>
       </ng-container>
   
-      <!-- Name Column -->
+      <!-- Trip ID Column -->
       <ng-container matColumnDef="trip_id">
-        <mat-header-cell *matHeaderCellDef> Trip ID </mat-header-cell>
+        <mat-header-cell *matHeaderCellDef class= "header"> Trip ID </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.trip_id}} </mat-cell>
       </ng-container>
   
-      <!-- Weight Column -->
+      <!-- Start Time Column -->
       <ng-container matColumnDef="start_time">
-        <mat-header-cell *matHeaderCellDef> Start Time </mat-header-cell>
+        <mat-header-cell *matHeaderCellDef class= "header"> Start Time </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.start_time}} </mat-cell>
       </ng-container>
   
-      <!-- Symbol Column -->
+      <!-- End Time Column -->
       <ng-container matColumnDef="end_time">
-        <mat-header-cell *matHeaderCellDef> End Time </mat-header-cell>
+        <mat-header-cell *matHeaderCellDef class= "header"> End Time </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.end_time}} </mat-cell>
       </ng-container>
-  
+
+      <!-- Passholder Type Column -->
+      <ng-container matColumnDef="passholder_type">
+        <mat-header-cell *matHeaderCellDef class= "header" > Passholder Type </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.passholder_type}} </mat-cell>
+      </ng-container>
+
+      <!-- Trip Route Category Column -->
+      <ng-container matColumnDef="trip_route_category">
+        <mat-header-cell *matHeaderCellDef class= "header"> Trip Route Category </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.trip_route_category}} </mat-cell>
+      </ng-container>
+
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
       <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
     </mat-table>
@@ -48,3 +67,5 @@
                  [showFirstLastButtons]="true">
   </mat-paginator>
   </div>
+</body>
+  </html>

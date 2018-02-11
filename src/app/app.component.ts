@@ -1,15 +1,16 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule, MatTableDataSource,MatPaginator } from '@angular/material';
+import { MatPaginatorModule, MatTableDataSource, MatPaginator } from '@angular/material';
 import { DataImportService } from './app.service';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'] 
 })
 export class AppComponent {
-  displayedColumns = ['bike_id', 'trip_id', 'start_time', 'end_time'];
+  displayedColumns = ['bike_id', 'trip_id', 'start_time', 'end_time', 'passholder_type', 'trip_route_category'];
   ELEMENT_DATA: any;
   dataSource = new MatTableDataSource();    
   
@@ -39,7 +40,7 @@ export class AppComponent {
 
       
   }
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+ 
 
   /**
    * Set the paginator after the view init since this component will
@@ -49,6 +50,7 @@ export class AppComponent {
     this.dataSource.paginator = this.paginator;
   }
   
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 }
 
 

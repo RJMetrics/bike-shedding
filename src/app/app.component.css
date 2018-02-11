@@ -8,6 +8,7 @@
   .example-header {
     min-height: 64px;
     padding: 8px 24px 0;
+    
   }
   
   .mat-form-field {
@@ -19,3 +20,16 @@
     overflow: auto;
     max-height: 500px;
   }
+
+  .mat-header-row {
+background: #343a40;
+  }
+
+  .header{
+
+    color: white;
+  }
+
+  mat-row:nth-child(odd){
+    background-color: #77cad7;
+    }
