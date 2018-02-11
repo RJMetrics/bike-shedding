@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MatButtonModule,MatCheckboxModule, MatTableDataSource, MatFormFieldModule, MatInputModule  } from '@angular/material';
+import {MatButtonModule,MatCheckboxModule, MatTableDataSource, MatFormFieldModule, MatInputModule,MatPaginatorModule  } from '@angular/material';
 import {MatTableModule} from '@angular/material/table';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -21,7 +21,9 @@ import { DataImportService } from './app.service';
     MatInputModule,
     BrowserAnimationsModule,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [DataImportService],
   bootstrap: [AppComponent]

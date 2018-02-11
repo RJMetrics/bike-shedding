@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { MatTableDataSource } from '@angular/material';
+import { Component, ViewChild } from '@angular/core';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule, MatTableDataSource,MatPaginator } from '@angular/material';
 import { DataImportService } from './app.service';
 
 @Component({
@@ -14,6 +15,8 @@ export class AppComponent {
   
   constructor(private pLoanService: DataImportService) {
     this.getLoansPortfolio();
+
+    
   }
   applyFilter(filterValue: string) {
     filterValue = filterValue.trim(); // Remove whitespace
@@ -28,10 +31,24 @@ export class AppComponent {
         if (typeof (data) !== 'undefined' && data !== null) {
           console.log(data);
           this.dataSource.data = data.data;
+
+          
         }
       }
       );
+
+      
   }
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
+  /**
+   * Set the paginator after the view init since this component will
+   * be able to query its view for the initialized paginator.
+   */
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
+  
 }
 
 
