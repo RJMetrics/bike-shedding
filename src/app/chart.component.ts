@@ -3,7 +3,7 @@ import { Chart } from 'chart.js';
 import { ChartDataService } from './chart-data.service';
 
 @Component({
-  selector: 'app-root',
+  selector: 'barchart',
   templateUrl: './chart.component.html',
   styleUrls: ['./chart.component.css']
 })
@@ -35,15 +35,15 @@ export class ChartComponent implements OnInit {
               {
                 data: [this.OneWay[0], this.OneWay[1], this.OneWay[2]],
                 label: "One Way Trips",
-                backgroundColor: 'rgba(0, 153, 255, 0.2)',
-                borderColor: 'rgba(0, 153, 255, 1)',
+                backgroundColor: 'rgba(203, 238, 243, 1)',
+                borderColor: 'rgba(118, 222, 333, 7)',
                 borderWidth: 1
               },
               {
                 data: [this.RoundTrip[0], this.RoundTrip[1], this.RoundTrip[2]],
                 label: "Round Trips",
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgba(255, 99, 132, 1)',
+                backgroundColor: 'rgba(95, 105, 114, 1)',
+                borderColor: 'rgba(0, 0, 0, 1)',
                 borderWidth: 1      
               }
             ]

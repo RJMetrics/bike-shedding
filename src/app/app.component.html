@@ -1,20 +1,9 @@
 <html>
-  
-<header>
-  <!-- Title
-<nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">
-      Bike Sharing Data Dashboard
-    </a>
-  </nav> -->
-</header>  
 
-<body>
+<barchart></barchart>
 
-  
- 
-
-  <div class="example-container mat-elevation-z8">
+<div class="card-block">
+<div class="example-container mat-elevation-z8">
     <div class="example-header">
       <mat-form-field>
         <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
@@ -68,6 +57,5 @@
                  [showFirstLastButtons]="true">
   </mat-paginator>
   </div>
-
-</body>
+</div> 
   </html>

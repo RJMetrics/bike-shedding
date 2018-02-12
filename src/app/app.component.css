@@ -31,5 +31,5 @@ background: #343a40;
   }
 
   mat-row:nth-child(odd){
-    background-color: #77cad7;
+    background-color:#cbeef3; 
     }
