@@ -8,6 +8,8 @@ Hi, thanks for your interest in our Front End Engineering position. As part of t
 1. Fork this repo to your personal GitHub profile
 2. Clone this repo to your computer
 3. Visit [Indego's ride sharing data](https://www.rideindego.com/about/data/) site and download one of the datasets
+OR
+Use the sample data set provided [here](https://github.com/rjmetrics/bikeshedding/data/indego.json)
 4. Use front end web technologies to build a chart and answer a question about the data
 5. Add to the bottom of this README file details what needs to be done to view your project locally
 6. Make a pull request for us to review your code
