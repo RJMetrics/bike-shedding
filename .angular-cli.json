@@ -19,7 +19,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "../node_modules/mdi/css/materialdesignicons.min.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
@@ -29,6 +30,7 @@
       }
     }
   ],
+  
   "e2e": {
     "protractor": {
       "config": "./protractor.conf.js"
