@@ -4,8 +4,8 @@ import { ChartDataService } from './chart-data.service';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './chart.component.html',
+  styleUrls: ['./chart.component.css']
 })
 export class ChartComponent implements OnInit {
   @ViewChild('canvas') canvas: ElementRef;
