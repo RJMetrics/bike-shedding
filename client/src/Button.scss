@@ -16,7 +16,7 @@ button {
   // Glow, baby, glow!
   &:hover, &:focus, &.selected {
     outline: none;
-    background-color: lighten(#f49542, 30%);
+    background-color: lighten($button-highlight, 30%);
     border-color: $button-highlight;
     box-shadow: 0 0 10px $button-highlight;
   }

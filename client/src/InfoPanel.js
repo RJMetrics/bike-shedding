@@ -22,7 +22,8 @@ class GraphPanel extends Component {
     return (
       <div className='GraphPanel'>
         <div className='ButtonBar'>
-          Sort by:
+          {/* <div>Click on a date to see a sample of bike rides taken that day.</div> */}
+          <span>Sort by:</span>
           {VIEW_OPTIONS.map(option => (
             <Button
               onClick={this.onButtonClick(option)}

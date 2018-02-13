@@ -1,0 +1,9 @@
+@import 'variables.scss';
+
+.ChartPanel {
+  border: 1px solid lightgray;
+  background-color: $lightest-blue-gray;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+};

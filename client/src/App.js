@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 import Header from './Header';
-import GraphPanel from './GraphPanel';
+import InfoPanel from './InfoPanel';
 
 const App = () => (
   <div className='App'>
     <Header />
-    <GraphPanel />
+    <InfoPanel />
   </div>
 );
 

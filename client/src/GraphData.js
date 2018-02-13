@@ -69,8 +69,8 @@ class GraphData extends Component {
       .then(response => response.json())
       .then(json => {
         // Sort by date and temperature ...
-        // We have to slice to create a copy because .sort mutates the original array
-        // and things get real weird, real fast.
+        // We have to slice to create a copy because .sort mutates the
+        // original array and things get real weird, real fast.
         const sortedWeatherReports = {
           byDate: json.slice().sort(sortRecordByDate),
           byTemperature: json.slice().sort(sortWeatherByTemperature),
@@ -105,7 +105,7 @@ class GraphData extends Component {
 
   render(){
     const { ridesByDay, selectedDate, countsByDay, weatherReports, selectedValues } = this.state;
-    const selectedRides = ridesByDay && selectedDate && ridesByDay[selectedDate];
+    const selectedRides = selectedDate && ridesByDay && ridesByDay[selectedDate];
     const weatherReport = selectedDate && weatherReports &&
       weatherReports[this.props.view].find(report => report.date === selectedDate);
 

@@ -6,10 +6,10 @@ const WeatherReportRow = ({ weatherReport, titles }) => {
   return (
     <div>
       {/* {titles.map(title => ( */}
-        <div className='one-fourth'>
+        <div className='small-column'>
           {weatherReport.date}
         </div>
-        <div className='one-fourth'>
+        <div className='small-column'>
           {tempInDegreesF}
         </div>
       {/* ))} */}

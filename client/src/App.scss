@@ -2,8 +2,8 @@
 
 html, body {
   width: 100%;
-  background-color: lighten(#B2CFEA, 15%);
-  // background-color: lighten(lightgray, 10% );
+  background-color: $lightest-blue-gray;
+  min-width: 1000px; // ugh, the least responsive website ever.
 }
 
 #root {
@@ -40,44 +40,13 @@ html, body {
   border-radius: 10px;
 }
 
-.one,
-.one-third,
-.two-thirds,
-.one-fourth,
-.one-sixth,
-.half {
-  width: 100%;
+.medium-column, .small-column {
+  display: inline-block;
 }
 
-@media only screen and (min-width: 800px) {
-  .one,
-  .one-third,
-  .two-thirds,
-  .one-fourth,
-  .one-sixth,
-  .half {
-    display: inline-block;
-  }
-
-  .one {
-    width: 100%;
-  }
-  .half {
-    width: calc(100% / 2);
-  }
-  .one-third {
-    width: calc(100% / 3);
-  }
-  .one-fourth {
-    width: calc(100% / 4);
-  }
-  .one-sixth {
-    width: calc(100% / 6);
-  }
-  .two-thirds {
-    width: calc(100% / 3 * 2);
-  }
-  .column {
-    float: left;
-  }
+.medium-column {
+  width: calc(100% / 5); // Leave space for borders
+}
+.small-column {
+  width: calc(100% / 7);
 }
