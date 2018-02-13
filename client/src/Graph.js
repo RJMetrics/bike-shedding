@@ -2,33 +2,47 @@ import React, { Component } from 'react';
 import '../node_modules/react-vis/dist/style.css';
 import './Graph.css';
 import moment from 'moment';
+import { Hint } from 'react-vis';
+// import debounce from 'lodash.debounce';
 
-// import Popover from './Popover';
 import { XYPlot, XAxis, YAxis, VerticalBarSeries } from 'react-vis';
 
 class Graph extends Component {
   onValueClick = (data, event) => {
     this.props.onValueClick(data);
-  };
+  }
 
   onValueMouseOver = (data, event) => {
     this.props.onValueMouseOver(data);
-  };
+  }
 
   tickFormat = (index) => {
     const { dates, weatherReports, view } = this.props;
     if (view === 'byDate') {
       return moment(dates[index]).format('MM-D');
     }
-    return Math.round(weatherReports[index].observation_value * .18 + 32).toString() + '°';
+    // Convert from tenths of degrees C to F and round to a whole number.
+    const tempInC = weatherReports[index].observation_value;
+    return this.toFahrenheitString(tempInC);
+  }
+
+  toFahrenheitString = (num) => (
+    Math.round(num * .18 + 32).toString() + '°'
+  );
+
+  hintFormat = ({ x, y, color }) => {
+    const report = this.props.weatherReports.find(report => report.date === this.props.dates[x]);
+    return ([{
+      title: `${moment(this.props.dates[x]).format('MMMM DD')}`,
+      value: this.toFahrenheitString(report.observation_value),
+    }]);
   };
 
   render() {
     const {
-      weatherReports,
       countsByDay,
-      view,
       selectedValues,
+      weatherReports,
     } = this.props;
 
     const data = weatherReports.map((report, index) => ({
@@ -43,12 +57,17 @@ class Graph extends Component {
           <VerticalBarSeries
             data={data}
             onValueClick={this.onValueClick}
-            // onValueMouseOver={debounce(this.onValueMouseOver, 500)}
-            animation={'noWobble'}
+            onValueMouseOver={this.onValueMouseOver}
+            // animation={'noWobble'} // The Hint component clobbers
+            // onValueClick when the animation is on.
           />
-          {/* {selectedValues && (
-            <Popover value={selectedValues}/>
-          )} */}
+          {selectedValues && (
+            <Hint
+              value={selectedValues}
+              format={this.hintFormat}
+              orientation='topleft'
+            />
+          )}
           <XAxis tickFormat={this.tickFormat} tickLabelAngle={-45}/>
           <YAxis />
         </XYPlot>

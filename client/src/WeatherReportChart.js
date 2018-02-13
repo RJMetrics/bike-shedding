@@ -2,7 +2,6 @@ import React from 'react';
 import WeatherReportRow from './WeatherReportRow';
 import WeatherReportTitles from './WeatherReportTitles';
 import './WeatherReportChart.css';
-import ChartLegend from './ChartLegend';
 
 const TITLES = [
   'date',
