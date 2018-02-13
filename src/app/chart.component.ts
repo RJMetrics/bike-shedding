@@ -23,6 +23,7 @@ export class ChartComponent implements OnInit {
         return res.data;
       });
       this.generateChart();
+      // this.generatePieChart();
     });
   }
 
@@ -54,6 +55,7 @@ export class ChartComponent implements OnInit {
     });
   }
 
+  
   categorize(month: number, tripType: string) {
     switch(tripType) {
       case 'Round Trip': 
@@ -65,3 +67,5 @@ export class ChartComponent implements OnInit {
     }
   }
 }
+
+

@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent} from './app.component';
 import { ChartComponent} from './chart.component';
+import { PieComponent} from './pchart.component';
 import { DataImportService } from './app.service';
 import { ChartDataService } from './chart-data.service';
 import { MatIconModule } from '@angular/material';
@@ -16,7 +17,9 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl } from "@angular/platform-browse
 @NgModule({
   declarations: [
     AppComponent,
-    ChartComponent
+    ChartComponent,
+    PieComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,7 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl } from "@angular/platform-browse
   
   ],
   providers: [DataImportService,ChartDataService],
-  bootstrap: [AppComponent,ChartComponent]
+  bootstrap: [AppComponent,ChartComponent, PieComponent]
 })
 export class AppModule { }
 
