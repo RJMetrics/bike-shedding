@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MatButtonModule,MatCheckboxModule, MatTableDataSource, MatFormFieldModule, MatInputModule,MatPaginatorModule  } from '@angular/material';
+import {MatButtonModule,MatCheckboxModule, MatTableDataSource, MatFormFieldModule, MatInputModule,MatPaginatorModule, MatCardModule  } from '@angular/material';
 import {MatTableModule} from '@angular/material/table';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -31,6 +31,7 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl } from "@angular/platform-browse
     MatTableModule,
     MatPaginatorModule,
     MatIconModule,
+    MatCardModule
   
   ],
   providers: [DataImportService,ChartDataService],

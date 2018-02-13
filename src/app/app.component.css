@@ -5,6 +5,19 @@
     min-width: 300px;
   }
   
+  .div-card{
+
+    height: 500 px;
+    width: 500px;
+    float: left;
+  }
+
+.div-card-2{
+  height: 500 px;
+  width: 500 px;
+  float: left;
+
+}
   .example-header {
     min-height: 64px;
     padding: 8px 24px 0;
