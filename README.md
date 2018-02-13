@@ -39,9 +39,9 @@ Thanks and good luck!
 
 _________________________________________________________________________________________________________
 
-##Get Started
+###Get Started
 
-##Install Dependencies
+###Install Dependencies
 
 To get you started you can simply clone the bike-shedding repository and install the dependencies with this command:
 
@@ -50,7 +50,7 @@ To get you started you can simply clone the bike-shedding repository and install
 npm install
 ```
 
-##Run the Application
+###Run the Application
 
 The project is configured with a simple development web server. The simplest way to start this server is:
 
