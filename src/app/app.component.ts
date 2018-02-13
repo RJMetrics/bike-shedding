@@ -16,35 +16,48 @@ import { Chart } from 'chart.js';
 export class AppComponent {
   displayedColumns = ['bike_id', 'trip_id', 'start_time', 'end_time', 'passholder_type', 'trip_route_category'];
   ELEMENT_DATA: any;
+  passCount = [0, 0, 0, 0];
   dataSource = new MatTableDataSource();    
+  @ViewChild(MatPaginator) paginator: MatPaginator;
   
-  constructor(private pLoanService: DataImportService) {
-    this.getLoansPortfolio();
-
-    
+  constructor(private dataService: DataImportService) {
+    this.getData();
   }
+
   applyFilter(filterValue: string) {
     filterValue = filterValue.trim(); // Remove whitespace
     filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
     this.dataSource.filter = filterValue;
   }
 
-  getLoansPortfolio() {
-    this.pLoanService.getTripDetails()
-      .subscribe(
-      (data) => {
+  getData() {
+    this.dataService.getTripDetails()
+      .subscribe((data) => {
         if (typeof (data) !== 'undefined' && data !== null) {
-          console.log(data);
           this.dataSource.data = data.data;
-
-          
+          data.data.forEach(item => {
+            this.getPassTypes(item.passholder_type);
+          });
         }
-      }
-      );
-
-      
+    });   
   }
- 
+
+  getPassTypes(passType: string) {
+    this.passCount[3]++;    
+    switch(passType) {
+      case 'Walk-up': 
+        this.passCount[0]++;
+        break;
+      case 'Indego30':
+        this.passCount[1]++;
+        break;
+      case 'IndegoFlex':
+        this.passCount[2]++;
+        break;
+      default:
+        break;
+    }
+  }
 
   /**
    * Set the paginator after the view init since this component will
@@ -53,12 +66,8 @@ export class AppComponent {
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
-  
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  
+
 }
-
-
 
 export interface Element {
   name: string;
