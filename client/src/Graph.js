@@ -58,8 +58,9 @@ class Graph extends Component {
             data={data}
             onValueClick={this.onValueClick}
             onValueMouseOver={this.onValueMouseOver}
-            // animation={'noWobble'} // The Hint component clobbers
-            // onValueClick when the animation is on.
+            // animation={'noWobble'} // So sad: the Hint component clobbers
+            // onValueClick when the animation is on. react-vis says this is fixed,
+            // but I don't believe them. https://github.com/uber/react-vis/issues/510
           />
           {selectedValues && (
             <Hint
@@ -68,7 +69,10 @@ class Graph extends Component {
               orientation='topleft'
             />
           )}
-          <XAxis tickFormat={this.tickFormat} tickLabelAngle={-45}/>
+          <XAxis
+            tickFormat={this.tickFormat}
+            tickLabelAngle={-45}
+          />
           <YAxis />
         </XYPlot>
       </div>
