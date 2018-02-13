@@ -1,5 +1,3 @@
-const sortByDate = (a, b) => {
-  return (a.date < b.date) ? -1 : ((a.date > b.date) ? 1 : 0);
-};
-
-export default sortByDate;
+export default (a, b) => (
+  (a < b) ? -1 : ((a > b) ? 1 : 0)
+);

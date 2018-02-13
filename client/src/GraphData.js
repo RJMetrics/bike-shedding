@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Graph from './Graph';
 import ChartPanel from './ChartPanel';
-import sortByTemperature from './sorters/sortByTemperature';
+import sortWeatherByTemperature from './sorters/sortWeatherByTemperature';
+import sortRecordByDate from './sorters/sortRecordByDate';
 import sortByDate from './sorters/sortByDate';
 
 class GraphData extends Component {
@@ -10,21 +11,15 @@ class GraphData extends Component {
     countsByDay: null,
     weatherReports: null,
     dates: null,
-    rollover: null,
     selectedValues: null,
     selectedDate: null,
   }
-
-  sortByDates = (a, b) => (
-    (a < b) ? -1 : ((a > b) ? 1 : 0)
-  );
 
   fetchBikeRides = () => {
     fetch('api/bike_rides?=&count=true')
       .then(response => response.json())
       .then(json => {
-        const dates = Object.keys(json).reverse();
-        const sortedDates = dates.sort(this.sortByDates);
+        const sortedDates = Object.keys(json).sort(sortByDate);
 
         this.setState({
           countsByDay: json,
@@ -39,7 +34,7 @@ class GraphData extends Component {
 
   fetchBikeRidesByDay = (date) => {
     const that = this;
-    fetch(`api/bike_rides?=&date=${date}&limit=10`)
+    fetch(`api/bike_rides?=&date=${date}`)
       .then(response => response.json())
       .then(json => {
         // Make a new copy of the state. Now we mutate!
@@ -49,7 +44,7 @@ class GraphData extends Component {
         json.forEach(item => {
           const stateForDate = newBikeRideState[item.date];
           if (stateForDate && stateForDate.find(ride => ride.id === item.id)) {
-            // The bike ride has already been fetched.
+            // The bike ride has already been fetched, no need to add it.
             return;
           } else {
             // Add it to the collection.
@@ -77,8 +72,8 @@ class GraphData extends Component {
         // We have to slice to create a copy because .sort mutates the original array
         // and things get real weird, real fast.
         const sortedWeatherReports = {
-          byDate: json.slice().sort(sortByDate),
-          byTemperature: json.slice().sort(sortByTemperature),
+          byDate: json.slice().sort(sortRecordByDate),
+          byTemperature: json.slice().sort(sortWeatherByTemperature),
         };
         this.setState({ weatherReports: sortedWeatherReports })
       })
@@ -100,7 +95,7 @@ class GraphData extends Component {
     this.setState({
       selectedValues: { x, y },
     });
-    // console.log('selectedValues: ', { x, y });
+    console.log('selectedValues: ', { x, y });
   }
 
   componentDidMount () {
