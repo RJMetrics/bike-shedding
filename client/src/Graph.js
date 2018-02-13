@@ -73,7 +73,7 @@ class Graph extends Component {
             tickFormat={this.tickFormat}
             tickLabelAngle={-45}
           />
-          <YAxis />
+          <YAxis title='Number of Rides'/>
         </XYPlot>
       </div>
     )
