@@ -36,3 +36,28 @@ Hi, thanks for your interest in our Front End Engineering position. As part of t
 Feel free to reach out to us for clarifications. 
 
 Thanks and good luck!
+
+_________________________________________________________________________________________________________
+
+##Get Started
+
+##Install Dependencies
+
+To get you started you can simply clone the bike-shedding repository and install the dependencies with this command:
+
+
+```
+npm install
+```
+
+##Run the Application
+
+The project is configured with a simple development web server. The simplest way to start this server is:
+
+```
+npm start
+``````
+
+Now browse to the app at [`localhost:4200/index.html`]
+
+
