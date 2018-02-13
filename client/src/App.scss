@@ -1,0 +1,83 @@
+@import 'variables.scss';
+
+html, body {
+  width: 100%;
+  background-color: lighten(#B2CFEA, 15%);
+  // background-color: lighten(lightgray, 10% );
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App {
+  background-color: #FFF;
+  color: darkslategray;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  width: 900px;
+  border: 1px solid lightgray;
+  margin: 20px 40px;
+  padding: 20px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 1000px;
+}
+
+.row::before,
+.row::after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+.__react_component_tooltip.type-dark {
+  border-radius: 10px;
+}
+
+.one,
+.one-third,
+.two-thirds,
+.one-fourth,
+.one-sixth,
+.half {
+  width: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+  .one,
+  .one-third,
+  .two-thirds,
+  .one-fourth,
+  .one-sixth,
+  .half {
+    display: inline-block;
+  }
+
+  .one {
+    width: 100%;
+  }
+  .half {
+    width: calc(100% / 2);
+  }
+  .one-third {
+    width: calc(100% / 3);
+  }
+  .one-fourth {
+    width: calc(100% / 4);
+  }
+  .one-sixth {
+    width: calc(100% / 6);
+  }
+  .two-thirds {
+    width: calc(100% / 3 * 2);
+  }
+  .column {
+    float: left;
+  }
+}

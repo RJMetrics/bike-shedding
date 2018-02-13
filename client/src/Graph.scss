@@ -1,0 +1,12 @@
+.rv-continuous-color-legend {
+  margin-right: auto;
+  margin-left: auto;
+  width: 10%;
+  display: inline-block;
+  float: right;
+}
+
+// Our centering mucks up the left-align on the legend, so we need to restore it
+.rv-legend-titles {
+  text-align: left;
+}

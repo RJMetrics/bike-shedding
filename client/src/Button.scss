@@ -1,0 +1,25 @@
+@import 'variables.scss';
+
+button {
+  color: #181c72;
+  border: 2px solid #c3c3c3;
+  border-radius: 10px;
+  // background-color: #e6e6e9;
+  padding: 7px 10px 7px 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+
+  // Give a little additional oomph to the selected element, since our hover
+  // is the same as our selected state.
+  &.selected {
+    font-weight: bold;
+  }
+
+  // Glow, baby, glow!
+  &:hover, &:focus, &.selected {
+    outline: none;
+    border-color: $button-highlight;
+    box-shadow: 0 0 10px $button-highlight;
+    // transition: box-shadow linear .5s;
+  }
+}

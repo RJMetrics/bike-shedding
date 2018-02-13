@@ -1,0 +1,1 @@
+json.extract! bike_ride, :id, :trip_id, :duration, :start_time, :end_time, :start_station, :start_lat, :start_lon, :end_station, :end_lat, :end_lon, :bike_id, :plan_duration, :trip_route_category, :passholder_type
