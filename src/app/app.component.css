@@ -22,7 +22,10 @@ a.nav-link:hover {
   color: #111111;
   padding-left: .5em;
 } */
+.bchartText{
 
+font-weight: 200;
+}
 .row .col-sm-6 .div-card{
   
   height: 100%;
@@ -75,15 +78,22 @@ margin: auto;
 }
 
 .card1:hover{
-  background: #dcf9a2;
+  background: #b3f829;
 }
 .card3:hover {
-  background: #dcf9a2;
+  background: #b3f829;
 }
 
 .card2, .card4 {
   background-color: #cbeef3;
 }
+.card2:hover{
+  background-color: #9de4fa;
+}
+.card4:hover{
+  background-color: #9de4fa;
+}
+
 
 .example-header {
   min-height: 64px;
@@ -110,6 +120,14 @@ mat-row:nth-child(odd){
   background-color:#cbeef3; 
   }
 
+ .div-card .bchartText{
+   font-weight:700;
+ }
+
+ .row .div-card-2 .tbHeader{
+   font-size: 150%;
+   text-align: center;
+ }
 
 /* Reset CSS */
 
