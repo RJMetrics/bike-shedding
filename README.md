@@ -39,7 +39,7 @@ Thanks and good luck!
 
 _________________________________________________________________________________________________________
 
-### Get Started
+# Get Started
 
 ## Install Dependencies
 
