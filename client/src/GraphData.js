@@ -20,7 +20,7 @@ class GraphData extends Component {
   );
 
   fetchBikeRides = () => {
-    fetch('/bike_rides?=&count=true')
+    fetch('api/bike_rides?=&count=true')
       .then(response => response.json())
       .then(json => {
         const dates = Object.keys(json).reverse();
@@ -39,7 +39,7 @@ class GraphData extends Component {
 
   fetchBikeRidesByDay = (date) => {
     const that = this;
-    fetch(`/bike_rides?=&date=${date}&limit=10`)
+    fetch(`api/bike_rides?=&date=${date}&limit=10`)
       .then(response => response.json())
       .then(json => {
         // Make a new copy of the state. Now we mutate!
@@ -70,7 +70,7 @@ class GraphData extends Component {
   }
 
   fetchWeatherReports = () => {
-    fetch('/weather_reports')
+    fetch('api/weather_reports')
       .then(response => response.json())
       .then(json => {
         // Sort by date and temperature ...
