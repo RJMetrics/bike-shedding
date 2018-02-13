@@ -43,7 +43,7 @@ import { ChartDataService } from './chart-data.service';
                   
                     backgroundColor: [
                       'rgba(203, 238, 243, 1)',
-                      'rgba(118, 222, 333, 7)',
+                      'rgba(196, 243, 99, 1)',
                       'rgba(95, 105, 114, 1)'
                     ],
                       
@@ -56,7 +56,7 @@ import { ChartDataService } from './chart-data.service';
                     label: "February",
                     backgroundColor: [
                       'rgba(203, 238, 243, 1)',
-                      'rgba(118, 222, 333, 7)',
+                      'rgba(196, 243, 99, 1)',
                       'rgba(95, 105, 114, 1)'
                     ]     
                   },
