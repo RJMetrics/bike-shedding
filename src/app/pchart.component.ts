@@ -35,27 +35,27 @@ import { ChartDataService } from './chart-data.service';
         this.pieChart = new Chart(this.pieCanvas.nativeElement.getContext('2d'), {
           type: 'doughnut',
           data: {
-            labels: ["Jan", "Feb", "March"],
+            labels: ["January", "February", "March"],
             // labels1: ["W", "30", "flex"],
               datasets: [
                   {
-                    data: [this.WalkUp[0], this.WalkUp[1], this.WalkUp[2]],
-                    label: "Jan",
+                    data: [this.WalkUp[0], this.Indego30[0], this.IndegoFlex[0]],
+                    label: "January",
                     backgroundColor: 'rgba(203, 238, 243, 1)',
                     // borderColor: 'rgba(118, 222, 333, 7)',
                     // borderWidth: 1
                   },
                   {
-                    data: [this.Indego30[0], this.Indego30[1], this.Indego30[2]],
-                    label: "Feb",
+                    data: [this.WalkUp[1], this.Indego30[1], this.IndegoFlex[1]],
+                    label: "February",
                     backgroundColor: 'rgba(95, 105, 114, 1)',
                     // borderColor: 'rgba(0, 0, 0, 1)',
                     // borderWidth: 1      
                   },
                   {
-                    data: [this.IndegoFlex[0], this.IndegoFlex[1], this.IndegoFlex[2]],
+                    data: [this.WalkUp[2], this.Indego30[2], this.IndegoFlex[2]],
                     label: "March",
-                    // backgroundColor: 'rgba(95, 105, 114, 1)',
+                    backgroundColor: 'rgba(95, 105, 114, 1)',
                     // borderColor: 'rgba(0, 0, 0, 1)',
                     // borderWidth: 1      
                   }
