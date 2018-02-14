@@ -3,7 +3,6 @@ import '../node_modules/react-vis/dist/style.css';
 import './Graph.css';
 import moment from 'moment';
 import { Hint } from 'react-vis';
-// import debounce from 'lodash.debounce';
 
 import { XYPlot, XAxis, YAxis, VerticalBarSeries } from 'react-vis';
 

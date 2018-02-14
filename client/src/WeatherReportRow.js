@@ -5,14 +5,12 @@ const WeatherReportRow = ({ weatherReport, titles }) => {
   const tempInDegreesF = (tempInTenthOfDegreesC * .18) + 32;
   return (
     <div>
-      {/* {titles.map(title => ( */}
-        <div className='small-column'>
-          {weatherReport.date}
-        </div>
-        <div className='small-column'>
-          {tempInDegreesF}
-        </div>
-      {/* ))} */}
+      <div className='small-column'>
+        {weatherReport.date}
+      </div>
+      <div className='small-column'>
+        {tempInDegreesF}
+      </div>
     </div>
   );
 }

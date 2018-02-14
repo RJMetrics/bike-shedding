@@ -60,7 +60,7 @@ cd ..
 git clone https://github.com/wrayjs/bike-shedding-seeds.git
 ```
 
-Move both csv's into `bike-shedding/db/`.
+Move both csv's into `bike-shedding`.
 
 ```
 bundle exec rake db:create db:migrate db:seed

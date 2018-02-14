@@ -10,7 +10,7 @@ CSV.foreach("indego-2017-q4.csv", {
 end
 #
 
-CSV.foreach("phl_weather_new.csv", {
+CSV.foreach("phl_airport_weather_2017.csv", {
   encoding: "UTF-8",
   headers: true,
   header_converters: :symbol,

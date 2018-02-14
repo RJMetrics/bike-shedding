@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import BikeRideRow from './BikeRideRow';
 import BikeRideTitles from './BikeRideTitles';
 import './BikeRidesChart.css';
-// import ChartLegend from './ChartLegend';
 
 const TITLES = [
   'duration',
@@ -22,7 +21,6 @@ class BikeRidesChart extends Component {
   render() {
     return (
       <div className='BikeRidesChart container'>
-        {/* <ChartLegend /> */}
         {this.props.bikeRides && <BikeRideTitles titles={TITLES} />}
         {this.props.bikeRides && this.props.bikeRides.map(ride => (
           <BikeRideRow ride={ride} titles={TITLES} key={ride.id} />
