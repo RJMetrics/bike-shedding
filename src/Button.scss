@@ -1,0 +1,23 @@
+@import 'variables.scss';
+
+button {
+  color: $button-color;
+  border: 2px solid $button-border;
+  border-radius: 10px;
+  padding: 7px 10px 7px 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+
+
+  &.selected {
+    font-weight: bold;
+  }
+
+  // Glow, baby, glow!
+  &:hover, &:focus, &.selected {
+    outline: none;
+    background-color: lighten($button-highlight, 30%);
+    border-color: $button-highlight;
+    box-shadow: 0 0 10px $button-highlight;
+  }
+}

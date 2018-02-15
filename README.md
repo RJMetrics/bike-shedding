@@ -34,6 +34,19 @@ Use the sample data set provided in the data directory.
 2. Code quality
 3. Style and creativity
 
-Feel free to reach out to us for clarifications. 
+Feel free to reach out to us for clarifications.
 
 Thanks and good luck!
+
+### How to run this project locally
+
+You must have npm installed.
+
+Clone the repo and `cd` into it. Then:
+
+```
+npm install
+npm start
+```
+
+Your browser should open with the project.
