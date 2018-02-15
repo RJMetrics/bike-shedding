@@ -44,7 +44,6 @@ You must have npm installed.
 Clone the repo and `cd` into it. Then:
 
 ```
-cd client
 npm install
 npm start
 ```
