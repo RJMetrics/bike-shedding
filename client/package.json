@@ -2,7 +2,7 @@
   "name": "bike_shedding",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001/",
+  "proxy": "https://protected-river-10197.herokuapp.com",
   "dependencies": {
     "lodash.debounce": "^4.0.8",
     "moment": "^2.20.1",

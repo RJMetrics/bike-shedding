@@ -38,39 +38,15 @@ Feel free to reach out to us for clarifications.
 Thanks and good luck!
 
 ### How to run this project locally
-You must have Ruby, Rails, Bundler, and npm installed.
 
-Clone the repo and bundle:
-```
-git clone https://github.com/wrayjs/bike-shedding.git
-cd bike-shedding
-```
+You must have npm installed.
+
+Clone the repo and `cd` into it. Then:
 
 ```
-bundle install
 cd client
-npm install // or yarn install if you prefer
-cd ..
-```
-
-The seed files must be copied from another repo, because [Github does currently not support large files in public forks](https://help.github.com/articles/collaboration-with-git-large-file-storage/).
-
-```
-cd ..
-git clone https://github.com/wrayjs/bike-shedding-seeds.git
-```
-
-Move both csv's into `bike-shedding`.
-
-```
-bundle exec rake db:create db:migrate db:seed
-```
-
-This will take a while.
-
-```
-gem install foreman
-foreman start
+npm install
+npm start
 ```
 
 Your browser should open with the project.
