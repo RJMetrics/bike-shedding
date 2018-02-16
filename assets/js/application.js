@@ -35,7 +35,14 @@ $(document).ready(function() {
               node.appendChild(tripLink);
             }
           },
-          duration: 'Time spent on bike',
+          duration: {
+            label: 'Time spent on bike',
+            renderCell: function(object, value, node) {
+              var durationInfo = document.createElement('span');
+              durationInfo.innerHTML = object.duration + ' minutes';
+              node.appendChild(durationInfo);
+            }
+          },
           bike_id: 'Bike id',
           trip_route_category: 'Trip type',
           locale: {
