@@ -1,0 +1,104 @@
+body {
+  font-family: 'Helvetica';
+  background-color: #f2f4f8;
+  margin: 0 30px;
+  font-size: 15px;
+}
+h1 {
+  text-align: center;
+}
+p {
+  padding: 10px;
+}
+.padding-vertical {
+  padding: 20px 0;
+}
+.table-list {
+  display: table;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+.table-list:not(first-of-type) {
+  margin-top: 20px;
+  padding: 10px 0;
+}
+.table-list-td {
+  display: table-cell;
+  width: 50%;
+}
+.table-list-td canvas {
+  width: 100% !important;
+}
+.claro {
+  margin: 0 20px;
+}
+.dialog-table {
+  width: 500px;
+}
+.claro .dijitDialogPaneContent {
+  border: 1px solid #ddd;
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+}
+.claro .dijitDialogTitleBar {
+  background-image: none;
+  background-color: #eee;
+  border: 1px solid #ddd;
+}
+.claro .dijitDialogCloseIcon .closeText {
+  display: none;
+}
+
+.leaflet-container {
+  height: 300px;
+}
+
+.alert-panel {
+  margin: 0 20px 20px 20px;
+  border: 2px solid #325675;
+}
+.alert-panel p {
+  display: inline-block;
+  margin-left: 60px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.alert-panel p.icon {
+  font-weight: bold;
+  color: #325675;
+}
+.alert-panel p.icon::before {
+  content: '\f071';
+  font-family: 'FontAwesome';
+  position: relative;
+  margin-left: 0;
+  margin-right: 10px;
+}
+@media (max-width: 800px) {
+  body {
+    background-color: #fff;
+    margin: 0 10px;
+  }
+  .table-list {
+    box-shadow: none;
+  }
+  .table-list-td {
+    display: block;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  .table-list-td canvas {
+    box-shadow: 0 2px 4px 0 rgba(50,50,93,.1);
+  }
+  .table-list-td:not(first-of-type) {
+    margin-top: 20px;
+  }
+  .no-border-mobile {
+    border: 0;
+    border-radius: 0;
+  }
+}

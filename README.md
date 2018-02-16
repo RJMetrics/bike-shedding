@@ -34,6 +34,14 @@ Use the sample data set provided in the data directory.
 2. Code quality
 3. Style and creativity
 
-Feel free to reach out to us for clarifications. 
+Feel free to reach out to us for clarifications.
 
 Thanks and good luck!
+
+### Installation instructions
+
+There are a number of development dependencies required to run this project. I have included the
+package,json file.
+
+1. npm install
+2. in terminal type `php -S localhost:8000` [or any port of your choosing]
