@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 body {
-  font-family: 'Helvetica';
+  font-family: 'Open Sans';
   background-color: #f2f4f8;
   margin: 0 30px;
   font-size: 15px;
