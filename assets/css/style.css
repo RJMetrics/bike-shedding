@@ -10,6 +10,9 @@ h1 {
 p {
   padding: 10px;
 }
+a {
+  color: #36a1eb;
+}
 .padding-vertical {
   padding: 20px 0;
 }
@@ -31,6 +34,19 @@ p {
 }
 .table-list-td canvas {
   width: 100% !important;
+}
+/* dojo table style overrides */
+.claro .dgrid-header,
+.claro .dgrid-footer,
+.claro .dgrid-header:hover,
+.claro .dgrid-footer:hover {
+  background-image: none;
+  background-color: #f7f7f7;
+}
+.claro .dgrid-header .dgrid-cell:hover,
+.claro .dgrid-row:hover {
+  background-image: none;
+  background-color: #f7fbfc;
 }
 .claro {
   margin: 0 20px;
