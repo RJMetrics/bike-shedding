@@ -11,13 +11,16 @@ const App = props => {
     <div className="container-fluid">
       <TopBar />
       <div className="row">
+
         <div className="col-md-5">
           <SVGContainer json={json} />
         </div>
+
         <div className="col-md-7">
           <Table json={json}/>
           <Questions />
         </div>
+
       </div>
     </div>
   );

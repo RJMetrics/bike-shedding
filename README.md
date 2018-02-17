@@ -34,6 +34,13 @@ Use the sample data set provided in the data directory.
 2. Code quality
 3. Style and creativity
 
-Feel free to reach out to us for clarifications. 
+Feel free to reach out to us for clarifications.
 
 Thanks and good luck!
+
+###To view the project locally:
+
+$ npm install
+$ npm start
+
+Visit localhost:8080 in your browser
