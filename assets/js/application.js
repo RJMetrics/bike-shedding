@@ -95,7 +95,7 @@ $(document).ready(function() {
                     .addTo(map);
                 }
 
-                L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+                L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {
                   maxZoom: 18,
                   id: 'mapbox.streets',
                   accessToken: 'pk.eyJ1IjoiZG9ub3ZhbmNsYXJrZSIsImEiOiJjamRvdjdjeDEwcms1MnBwa2ZqaXk0dDJuIn0.3St3cLui5wjQ8RnlMBFz0w'
