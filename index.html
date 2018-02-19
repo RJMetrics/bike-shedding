@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta charset="utf-8">
+  	<title>Bike Shedding Data</title>
+  	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="node_modules/dgrid/css/dgrid.css" />
+    <link rel="stylesheet" type="text/css" href="node_modules/dgrid/css/skins/claro.css" />
+    <link rel="stylesheet" type="text/css" href="node_modules/dijit/themes/claro/Dialog.css" />
+    <link rel="stylesheet" type="text/css" href="node_modules/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css" />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+  	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  </head>
+  <body>
+    <h1>Bike Share Indego Dashboard</h1>
+
+    <div class="table-list">
+      <div class="table-list-td">
+        <canvas id="pieChart" height="200"></canvas>
+      </div>
+
+      <div class="table-list-td">
+        <canvas id="barChart" height="200px"></canvas>
+      </div>
+    </div>
+
+
+    <div class="table-list padding-vertical">
+      <div class="table-list-td no-border-mobile">
+        <div class="alert-panel">
+          <p class="icon">Alert</p>
+          <p>
+            This dashboard includes information that I think would be useful for
+            a company as well as a user. I included a pie graph showing which
+            memberships were purchased, highlighting Indego30 as the most popular
+            membership. I also included recent trips that show a map of pick up and
+            drop off locations. I wanted to include a variation of data, without
+            being too specific to simplify the dashboard.
+          </p>
+        </div>
+        <div class="claro" id="grid"></div>
+      </div>
+    </div>
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/chart.js/dist/Chart.js"></script>
+    <script type="text/javascript" src="node_modules/leaflet/dist/leaflet.js"></script>
+    <script type="text/javascript" src="node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.min.js"></script>
+    <script type="text/javascript" src="assets/js/require.js"></script>
+	  <script type="text/javascript" src="assets/js/application.js"></script>
+  </body>
+</html>
