@@ -23,7 +23,7 @@ $(document).ready(function() {
                 var content = document.createElement('div');
                 content.className = 'dialog-table';
                 content.innerHTML = '<p>Trip began at ' + moment(object.start_time).format('ddd, MMM Do YYYY, h:mm a') + ', and was taken from station ' + object.start_station + '.</p>' +
-                                    '<p>Trip ended at ' + moment(object.end_time).format('ddd, MMM Do YYYY, h:mm a') + ', and was returned to station ' + object.end_station + '.</p>'
+                  '<p>Trip ended at ' + moment(object.end_time).format('ddd, MMM Do YYYY, h:mm a') + ', and was returned to station ' + object.end_station + '.</p>'
 
                 var tripDialog = new Dialog({
                   title: "Trip information for " + object.trip_id,
@@ -100,6 +100,17 @@ $(document).ready(function() {
                   id: 'mapbox.streets',
                   accessToken: 'pk.eyJ1IjoiZG9ub3ZhbmNsYXJrZSIsImEiOiJjamRvdjdjeDEwcms1MnBwa2ZqaXk0dDJuIn0.3St3cLui5wjQ8RnlMBFz0w'
                 }).addTo(map);
+                if (object.trip_route_category != 'Round Trip') {
+                  L.Routing.control({
+                    show: false,
+                    units: 'imperial',
+                    waypoints: [
+                      L.latLng(object.start_lat, object.start_lon),
+                      L.latLng(object.end_lat, object.end_lon)
+                    ]
+                  }).addTo(map);
+                }
+
               })
               node.appendChild(infoLink);
             }
