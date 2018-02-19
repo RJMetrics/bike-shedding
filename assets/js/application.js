@@ -64,7 +64,7 @@ $(document).ready(function() {
 
                 locationDialog.show();
                 // custom icons to insert into map
-                var greenIcon = new L.Icon({
+                var startIcon = new L.Icon({
                   iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
                   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
                   iconSize: [25, 41],
@@ -72,7 +72,7 @@ $(document).ready(function() {
                   popupAnchor: [1, -34],
                   shadowSize: [41, 41]
                 });
-                var redIcon = new L.Icon({
+                var destinationIcon = new L.Icon({
                   iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
                   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
                   iconSize: [25, 41],
@@ -82,8 +82,8 @@ $(document).ready(function() {
                 });
 
                 var locations = [
-                  ['Start Location', object.start_lat, object.start_lon, greenIcon],
-                  ['End Location', object.end_lat, object.end_lon, redIcon]
+                  ['Start Location', object.start_lat, object.start_lon, startIcon],
+                  ['End Location', object.end_lat, object.end_lon, destinationIcon]
                 ]
                 var map = object.trip_id;
                 map = L.map(mapID).setView([object.start_lat, object.start_lon], 13);
@@ -104,6 +104,22 @@ $(document).ready(function() {
                   L.Routing.control({
                     show: false,
                     units: 'imperial',
+                    createMarker: function (i, start, n) {
+                      var marker_icon = null
+                      if (i == 0) {
+                        // This is the first marker, indicating start
+                        marker_icon = startIcon
+                      } else if (i == n -1) {
+                        //This is the last marker indicating destination
+                        marker_icon = destinationIcon
+                      }
+                      var marker = L.marker (start.latLng, {
+                        draggable: true,
+                        bounceOnAdd: false,
+                        icon: marker_icon
+                      })
+                    },
+
                     waypoints: [
                       L.latLng(object.start_lat, object.start_lon),
                       L.latLng(object.end_lat, object.end_lon)
