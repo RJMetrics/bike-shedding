@@ -34,6 +34,21 @@ Use the sample data set provided in the data directory.
 2. Code quality
 3. Style and creativity
 
-Feel free to reach out to us for clarifications. 
+Feel free to reach out to us for clarifications.
 
 Thanks and good luck!
+
+Project Instructions:
+
+You will need to install yarn to view this application on your computer.
+
+Step 1: Download or clone this repository
+
+Step 2: Open your terminal, cd into the  and type:
+
+```
+yarn install
+yarn start
+```
+
+The site will automatically load in your browser at `localhost:3000`.
