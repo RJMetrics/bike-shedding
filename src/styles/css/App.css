@@ -1,4 +1,44 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  position: relative; }
+
 .App {
-  background-color: orange; }
+  background-color: #dedede;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.content-area-one {
+  position: relative;
+  display: inline-flex;
+  height: 30vh;
+  width: 20vw;
+  margin-right: 2px;
+  background-color: #402e60;
+  border: 4px solid black;
+  border-radius: 2%; }
+
+.content-area-two {
+  position: relative;
+  display: inline-flex;
+  height: 30vh;
+  width: 20vw;
+  background-color: #4b6a17;
+  border: 4px solid black;
+  border-radius: 2%; }
+
+.content-area-three {
+  position: relative;
+  display: inline-flex;
+  margin-left: 2px;
+  height: 30vh;
+  width: 20vw;
+  background-color: #39615f;
+  border: 4px solid black;
+  border-radius: 2%; }
 
 /*# sourceMappingURL=App.css.map */
