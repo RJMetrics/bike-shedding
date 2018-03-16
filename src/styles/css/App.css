@@ -12,33 +12,23 @@ html, body {
   justify-content: center;
   align-items: center; }
 
-.content-area-one {
+.content-area {
   position: relative;
   display: inline-flex;
-  height: 30vh;
-  width: 20vw;
-  margin-right: 2px;
-  background-color: #402e60;
+  border-radius: 2%;
   border: 4px solid black;
-  border-radius: 2%; }
+  height: 30vh;
+  width: 20vw; }
+
+.content-area-one {
+  margin-right: 2px;
+  background-color: #402e60; }
 
 .content-area-two {
-  position: relative;
-  display: inline-flex;
-  height: 30vh;
-  width: 20vw;
-  background-color: #4b6a17;
-  border: 4px solid black;
-  border-radius: 2%; }
+  background-color: #4b6a17; }
 
 .content-area-three {
-  position: relative;
-  display: inline-flex;
   margin-left: 2px;
-  height: 30vh;
-  width: 20vw;
-  background-color: #39615f;
-  border: 4px solid black;
-  border-radius: 2%; }
+  background-color: #39615f; }
 
 /*# sourceMappingURL=App.css.map */
