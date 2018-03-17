@@ -1,33 +1,37 @@
 import React, { Component } from 'react'
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts'
+import { XAxis, YAxis, CartesianGrid, Tooltip, LineChart, Line } from 'recharts'
 import IndegoData from './data/indego.json'
 import _ from 'lodash'
+import moment from 'moment'
 import './styles/css/App.css'
 
 class App extends Component {
   render() {
-    const byPassholder = _.groupBy(IndegoData, "passholder_type");
-    const data = _.map(byPassholder, function(trips, type) {
+    // const byPassholder = _.groupBy(IndegoData, "passholder_type");
+
+    // Lets group by start time instead of passholder type
+    let byStartTime = _.map(IndegoData, function(trip) {
+      trip.start_time = trip.start_time.substr(0, 13)
+      return trip
+    });
+    byStartTime = _.groupBy(byStartTime, 'start_time');
+
+    const peakTimeData = _.map(byStartTime, function(trips, start_time) {
       return {
-        passholder_type: type,
-        number_of_trips: trips.length
+        start_time: moment(start_time).format("MMM Do, h a"),
+        "Number of Trips": trips.length
       }
     });
     return (
       <main className="App">
-        <div className="content-area content-area-one"/>
-        <div className="content-area content-area-two"/>
-        <div className="content-area content-area-three"/>
-
-        <BarChart width={600} height={300} data={data}
+        <LineChart className={"content-area content-area-one"} width={600} height={300} data={peakTimeData}
           margin={{top: 5, right: 30, left: 20, bottom: 5}}>
-           <XAxis dataKey="passholder_type"/>
-           <YAxis dataKey="number_of_trips"/>
-           <CartesianGrid strokeDasharray="3 3"/>
-           <Tooltip/>
-           <Legend />
-           <Bar dataKey="number_of_trips" fill="#82ca9d" />
-        </BarChart>
+        <XAxis dataKey="start_time" />
+        <YAxis />
+        <CartesianGrid strokeDasharray="3 3"/>
+        <Tooltip/>
+        <Line type="monotone" dataKey="Number of Trips" stroke="#8884d8" activeDot={{r: 8}}/>
+        </LineChart>
       </main>
     );
   }
