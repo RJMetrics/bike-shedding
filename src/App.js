@@ -6,6 +6,7 @@ import './styles/css/App.css'
 
 class App extends Component {
   render() {
+    const byPassholder = _.groupBy(IndegoData, "passholder_type");
     return (
       <main className="App">
         <div className="content-area content-area-one"/>
