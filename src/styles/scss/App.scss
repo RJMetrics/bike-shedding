@@ -5,29 +5,31 @@ html, body {
   width: 100%;
   position: relative;
 }
+a:link, a:visited, a:active, a:visited {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
 .App {
   background-color: rgb(222, 222, 222);
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100vw;
+  overflow-x: hidden;
 }
-.content-area {
+.content-area--wrapper {
+  right: 10px;
+  margin: 0 auto;
   position: relative;
-  display: inline-flex;
-  border-radius: 2%;
-  border: 4px solid black;
-  height: 30vh;
-  width: 20vw;
+  display: inline-block;
 }
 .content-area-one {
-  // margin-right: 2px;
+  margin-right: 2vw;
   // background-color: rgb(224, 206, 254);
 }
 .content-area-two {
   // background-color: rgb(75, 106, 23);
 }
 .content-area-three {
-  // margin-left: 2px;
+  margin-left: 2px;
   // background-color: rgb(57, 97, 95);
 }
