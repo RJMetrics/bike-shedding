@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { XAxis, YAxis, CartesianGrid, Tooltip, AreaChart, Area, ResponsiveContainer } from 'recharts'
-import IndegoData from './data/indego.json'
+import IndegoData from './data/october_indego.json'
 import _ from 'lodash'
 import moment from 'moment'
 import './styles/css/App.css'
