@@ -1,8 +1,8 @@
-import Griddle, { plugins, RowDefinition, ColumnDefinition} from 'griddle-react'
-import IndegoData from '../data/indego.json'
-import React, { Component } from 'react'
 import _ from 'lodash'
+import Griddle, { plugins, RowDefinition, ColumnDefinition } from 'griddle-react'
+import IndegoData from '../data/indego.json'
 import moment from 'moment'
+import React, { Component } from 'react'
 
 class DateColumn extends Component {
   render() {
@@ -57,7 +57,7 @@ class DataTable extends Component {
       let timestamp = moment(starting_hour).valueOf();
       let duration = _.sum(
         _.map(trips, function(trip) {
-          return parseInt(trip.duration);
+          return parseInt(trip.duration, 10);
         })
       );
 
