@@ -17,8 +17,9 @@ a:link, a:visited, a:active, a:visited {
   overflow-x: hidden;
 }
 .content-area--wrapper {
+  background-color: white;
   right: 10px;
-  margin: 0 auto;
+  padding-right: 10vh;
   position: relative;
   display: inline-block;
 }

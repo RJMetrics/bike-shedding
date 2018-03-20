@@ -1,22 +1,13 @@
 import React, { Component } from 'react'
 import { XAxis, YAxis, CartesianGrid, Tooltip, AreaChart, Area, ResponsiveContainer } from 'recharts'
+import IndegoData from './data/october_indego.json'
 import _ from 'lodash'
 import moment from 'moment'
 import './styles/css/App.css'
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { data: [] };
-  }
-  componentDidMount() {
-    fetch('data/october_indego.json')
-      .then((response) => { return response.json() })
-      .then((data) => { this.setState({ data })
-    })
-  }
   render() {
-    const withStartTime = _.map(this.state.data, function(trip) {
+    const withStartTime = _.map(IndegoData, function(trip) {
       trip.starting_hour = trip.start_time.substr(0, 13)
       return trip
     });
