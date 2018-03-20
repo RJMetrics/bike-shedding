@@ -1,5 +1,6 @@
 import './styles/css/App.css'
-import AreaChart from './components/AreaChart'
+import PeakTimeChart from './components/PeakTimeChart'
+import PassholderChart from './components/PassholderChart'
 import DataTable from './components/DataTable'
 import React, { Component } from 'react'
 
@@ -7,8 +8,11 @@ class App extends Component {
   render() {
     return (
       <main className="App">
-        <AreaChart/>
-        <DataTable/>
+        <div className="dashboard--wrapper">
+          <PeakTimeChart/>
+          <PassholderChart/>
+          <DataTable/>
+        </div>
       </main>
     );
   }

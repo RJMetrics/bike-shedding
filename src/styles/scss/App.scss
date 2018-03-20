@@ -16,19 +16,35 @@ a:link, a:visited, a:active, a:visited {
   width: 100vw;
   overflow-x: hidden;
 }
-.content-area--wrapper {
-  background-color: white;
-  right: 10px;
-  padding-right: 10vh;
+.dashboard--wrapper {
+  display: block;
+  margin: 30vh auto;
+  width: 80%;
+  padding-right: 6vh;
+  position: relative;
 }
-.data-table {
+.content-area--wrapper {
+  background-color: rgb(8, 31, 48);
+  display: inline-flex;
+  min-height: 28vh;
+  justify-content: center;
+  padding: 3vh;
+  margin-bottom: 10vh;
+  position: relative;
+  top: 30px;
+  width: 80vw;
+}
+.data-table--wrapper {
   width: 100%;
   display: block;
+  text-align: center;
   position: relative;
 }
 .grid-cell {
   display: inline-block;
   text-align: center;
+  min-width: 25%;
+  position: relatve;
 }
 .pagination--wrapper {
   display: inline-block;
