@@ -60,4 +60,6 @@ npm start
 
 Now browse to the app at [`localhost:4200/index.html`]
 
+_________________________________________________________________________________________________________
 
+[![screenshot.jpg](https://s9.postimg.org/q69vw6gm7/screenshot.jpg)](https://postimg.org/image/mzfccjw63/)
