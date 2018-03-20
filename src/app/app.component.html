@@ -1,0 +1,153 @@
+<!-- <div class="row"> -->
+    <!-- SIDEBAR -->
+     <!-- <div class="col col-lg-3 sidebar">
+         <ul class="nav flex-column">
+             <li class="nav-item">
+               <a class="nav-link" href="#">DASHBOARD</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#">CHART</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#">DATA TABLE</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#">SUPPORT</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#">LOGOUT</a>
+             </li>
+           </ul>
+       </div> -->
+ 
+       <!-- MAIN CONTENT -->
+       <!-- <div class="col col-lg-3"> -->
+ 
+           <!-- BAR CHART -->
+           <mat-card class="div-1-3-card">
+           <div class="row">
+           <div class="col-sm-6">
+           
+               <div class="div-card"> 
+                
+                   <barchart></barchart>
+                 
+               </div>
+              </div>
+               <!-- DONUT CHART -->
+               <div class="col-sm-6">
+               <div class="div-card-3"> 
+                
+                    <piechart></piechart>
+                 
+                </div>
+             </div>
+             </div>
+
+            </mat-card>
+
+             
+               
+              
+<!-- DATA CARDS -->
+<div>
+  
+<div class="row card-container">
+  <div class="col">
+    <div class="mat-card card1">
+      <h3>Walk-Up Trips</h3>
+      {{passCount[0]}}
+    </div>
+  </div>
+  <div class="col">
+    <div class="mat-card card2">
+      <h3>Indego30 Trips</h3>
+      {{passCount[1]}}
+    </div>
+  </div>
+  <div class="col">
+    <div class="mat-card card3">
+      <h3>IndegoFlex Trips</h3>
+      {{passCount[2]}}
+    </div>
+  </div>
+  <div class="col">
+    <div class="mat-card card4">
+      <h3>Total Trips</h3>
+      {{passCount[3]}}
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- TABLE -->
+<div class="row">
+  <div class="div-card-2">
+    <mat-card>
+      <nav class="navbar navbar-dark bg-dark ">
+    <a class="navbar-brand" href="#">
+        
+        <h1 class="tbHeader">Table Dataset</h1>
+    </a>
+  </nav> 
+       <br>
+      <div class="card-block">
+        <div class="example-container mat-elevation-z8">
+          <div class="example-header">
+            <p>Type below to filter data:</p>
+            <mat-form-field>
+              <input matInput (keyup)="applyFilter($event.target.value)">
+            </mat-form-field>
+          </div>
+
+          <mat-table #table [dataSource]="dataSource">
+            <!-- Bike ID Column -->
+            <ng-container matColumnDef="bike_id">
+              <mat-header-cell *matHeaderCellDef class="header"> Bike ID </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.bike_id}} </mat-cell>
+            </ng-container>
+
+            <!-- Trip ID Column -->
+            <ng-container matColumnDef="trip_id">
+              <mat-header-cell *matHeaderCellDef class="header"> Trip ID </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.trip_id}} </mat-cell>
+            </ng-container>
+
+            <!-- Start Time Column -->
+            <ng-container matColumnDef="start_time">
+              <mat-header-cell *matHeaderCellDef class="header"> Start Time </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.start_time}} </mat-cell>
+            </ng-container>
+
+            <!-- End Time Column -->
+            <ng-container matColumnDef="end_time">
+              <mat-header-cell *matHeaderCellDef class="header"> End Time </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.end_time}} </mat-cell>
+            </ng-container>
+
+            <!-- Passholder Type Column -->
+            <ng-container matColumnDef="passholder_type">
+              <mat-header-cell *matHeaderCellDef class="header"> Passholder Type </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.passholder_type}} </mat-cell>
+            </ng-container>
+
+            <!-- Trip Route Category Column -->
+            <ng-container matColumnDef="trip_route_category">
+              <mat-header-cell *matHeaderCellDef class="header"> Trip Route Category </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.trip_route_category}} </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+          <mat-paginator #paginator [pageSize]="10" [showFirstLastButtons]="true">
+          </mat-paginator>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>
+<!-- </div> -->
+<!-- </div>  -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">

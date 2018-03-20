@@ -37,3 +37,30 @@ Use the sample data set provided in the data directory.
 Feel free to reach out to us for clarifications. 
 
 Thanks and good luck!
+
+_________________________________________________________________________________________________________
+
+# Get Started
+
+## Install Dependencies
+
+To get you started you can simply clone the bike-shedding repository and install the dependencies with this command:
+
+
+```
+npm install
+```
+
+## Run the Application
+
+The project is configured with a simple development web server. The simplest way to start this server is:
+
+```
+npm start
+``````
+
+Now browse to the app at [`localhost:4200/index.html`]
+
+_________________________________________________________________________________________________________
+
+[![screenshot.jpg](https://s9.postimg.org/q69vw6gm7/screenshot.jpg)](https://postimg.org/image/mzfccjw63/)

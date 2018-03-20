@@ -1,0 +1,176 @@
+/* Structure */
+.example-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* .sidebar {
+  background-color: #d3d3d3;
+}
+
+.sidebar li {
+  padding: 1em;
+}
+
+a.nav-link {
+  color: #777777;
+}
+
+a.nav-link:hover {
+  color: #111111;
+  padding-left: .5em;
+} */
+.bchartText{
+
+font-weight: 200;
+}
+.row .col-sm-6 .div-card{
+  
+  height: 100%;
+  width: 100%;
+  float: left;
+  margin: auto;
+ 
+}
+
+.row .col-sm-6 .div-card-3{
+
+height: 100%;
+width: 100%;
+float: left;
+margin: auto;
+}
+
+.div-card-2{
+  margin: 1em;
+ height: 50%;
+ width: 100%;
+  float: left;
+  
+  }
+
+.div-1-3-card{
+
+  margin:auto;
+}
+
+.card-container {
+  margin: 1em;
+}
+
+.card-container .mat-card {
+  height: 100px;
+  margin: .5em;
+  padding: .5em;
+  text-align: center;
+}
+
+.card-container .mat-card h3 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.card1, .card3 {
+  background-color:#c4f363;
+
+}
+
+.card1:hover{
+  background: #b3f829;
+}
+.card3:hover {
+  background: #b3f829;
+}
+
+.card2, .card4 {
+  background-color: #cbeef3;
+}
+.card2:hover{
+  background-color: #9de4fa;
+}
+.card4:hover{
+  background-color: #9de4fa;
+}
+
+
+.example-header {
+  min-height: 64px;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 30%;
+  border: 1px solid #999;
+  border-radius: .1em;
+  padding: .5em;
+}
+
+.mat-header-row {
+background: #343a40;
+}
+
+.header{
+
+  color: white;
+}
+
+mat-row:nth-child(odd){
+  background-color:#cbeef3; 
+  }
+
+ .div-card .bchartText{
+   font-weight:700;
+ }
+
+ .row .div-card-2 .tbHeader{
+   font-size: 150%;
+   text-align: center;
+ }
+
+/* Reset CSS */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
