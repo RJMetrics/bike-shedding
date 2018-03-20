@@ -19,14 +19,24 @@ a:link, a:visited, a:active, a:visited {
 .content-area--wrapper {
   background-color: white;
   right: 10px;
-  padding-right: 10vh;
-  position: relative;
-  display: inline-block; }
+  padding-right: 10vh; }
 
-.content-area-one {
-  margin-right: 2vw; }
+.data-table {
+  width: 100%;
+  display: block;
+  position: relative; }
 
-.content-area-three {
-  margin-left: 2px; }
+.grid-cell {
+  display: inline-block;
+  text-align: center; }
+
+.pagination--wrapper {
+  display: inline-block;
+  text-align: right; }
+
+.heading--cell {
+  width: 24.5%;
+  display: inline-flex;
+  justify-content: center; }
 
 /*# sourceMappingURL=App.css.map */
