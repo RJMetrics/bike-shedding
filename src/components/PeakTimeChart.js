@@ -1,8 +1,33 @@
 import React, { Component } from 'react'
 import IndegoData from '../data/indego.json'
-import { XAxis, YAxis, Tooltip, AreaChart, Area, ResponsiveContainer } from 'recharts'
+import { XAxis, YAxis, Tooltip, AreaChart, Area, ResponsiveContainer, Label } from 'recharts'
 import moment from 'moment'
 import _ from 'lodash'
+import FormattedDuration from './FormattedDuration'
+import { formatDate } from './FormattedDate'
+
+class TooltipContent extends Component {
+  render() {
+    const { active } = this.props;
+
+    if (active) {
+      const { payload, label } = this.props;
+      const date = label;
+      const trips = payload[0].value;
+      const duration = payload[1].value;
+
+      return(
+        <div className="tooltip">
+          Date: {date}<br />
+          Number of Trips: {trips}<br />
+          Total Duration: <FormattedDuration value={duration} />
+        </div>
+      )
+    }
+
+    return null;
+  }
+}
 
 export default class PeakTimeChart extends Component {
   render() {
@@ -12,14 +37,21 @@ export default class PeakTimeChart extends Component {
     });
     const byStartTime = _.groupBy(withStartTime, 'starting_hour');
     const peakTimeData = _.map(byStartTime, function(trips, starting_hour) {
+      let date = formatDate(starting_hour);
+      let duration = _.sum(
+        _.map(trips, function(trip) {
+          return parseInt(trip.duration, 10) / 60;
+        })
+      );
       return {
-        "Date": moment(starting_hour).format("MMM Do @ ha"),
-        "Number of Trips": trips.length
+        "Date": date,
+        "Number of Trips": trips.length,
+        "Total Duration": duration
       }
     });
 
     return (
-      <div className="content-area--wrapper">
+      <div className="peak-time--wrapper">
         <ResponsiveContainer aspect={3}>
           <AreaChart data={peakTimeData} margin={{top: 5, right: 30, left: 20, bottom: 5}}>
             <defs>
@@ -28,10 +60,10 @@ export default class PeakTimeChart extends Component {
                 <stop offset="95%" stopColor="#9bf5da" stopOpacity={0}/>
               </linearGradient>
             </defs>
-            <XAxis dataKey="Date" />
-            <YAxis />
-            <Tooltip/>
+            <XAxis dataKey="Date" formatter={formatDate} />
+            <Tooltip content={<TooltipContent />} wrapperStyle={{ width: 100, backgroundColor: '#ccc', color: '#000000' }}/>
             <Area type="monotone" dataKey="Number of Trips" stroke="#83d7be" fillOpacity={1} fill="url(#colorTrips)" activeDot={{r: 8}}/>
+            <Area type="monotone" dataKey="Total Duration" stroke="#9e2111" fillOpacity={1} fill="url(#colorTrips)" activeDot={{r: 8}}/>
           </AreaChart>
         </ResponsiveContainer>
       </div>

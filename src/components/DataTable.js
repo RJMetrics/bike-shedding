@@ -3,30 +3,8 @@ import Griddle, { plugins, RowDefinition, ColumnDefinition } from 'griddle-react
 import IndegoData from '../data/indego.json'
 import moment from 'moment'
 import React, { Component } from 'react'
-
-class DateColumn extends Component {
-  render() {
-    const date = moment(this.props.value);
-    const formattedDate = date.format('MMM Do @ ha');
-
-    return(
-      <span>{formattedDate}</span>
-    )
-  }
-}
-
-
-class DurationColumn extends Component {
-  render() {
-    const hours = Math.floor(this.props.value / 60);
-    const minutes = this.props.value % 60;
-    const formattedDuration = (hours > 0) ? `${hours}h ${minutes}m` : `${minutes}m`;
-
-    return(
-      <span>{formattedDuration}</span>
-    )
-  }
-}
+import FormattedDuration from './FormattedDuration'
+import FormattedDate from './FormattedDate'
 
 class DataTable extends Component {
   render() {
@@ -44,7 +22,12 @@ class DataTable extends Component {
         TableHeadingCell: 'heading--cell'
       },
       styles: {
-        Table: { width: "84vw", background: "#FFFFFF", paddingTop: "20px", paddingBottom: "20px" }
+        Table: {
+          width: "80vw",
+          borderRadius: "11px",
+          paddingTop: "20px",
+          paddingBottom: "20px"
+        }
       }
     };
     const sortProperties = [{ id: 'Number of Trips', sortAscending: false }];
@@ -79,9 +62,9 @@ class DataTable extends Component {
           sortProperties={sortProperties}
         >
           <RowDefinition>
-            <ColumnDefinition id="Date" order={1} customComponent={DateColumn} />
+            <ColumnDefinition id="Date" order={1} customComponent={FormattedDate} />
             <ColumnDefinition id="Number of Trips" order={2} />
-            <ColumnDefinition id="Total Duration" order={3} customComponent={DurationColumn} />
+            <ColumnDefinition id="Total Duration" order={3} customComponent={FormattedDuration} />
           </RowDefinition>
         </Griddle>
     );

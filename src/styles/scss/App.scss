@@ -5,26 +5,28 @@ html, body {
   width: 100%;
   position: relative;
 }
-a:link, a:visited, a:active, a:visited {
-  color: red;
-  text-decoration: none;
-  cursor: pointer;
-}
 .App {
   background-color: rgb(222, 222, 222);
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
 }
+a:link, a:visited, a:active, a:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
 .dashboard--wrapper {
-  display: block;
-  margin: 30vh auto;
-  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  top: 30vh;
   padding-right: 6vh;
   position: relative;
 }
-.content-area--wrapper {
+.peak-time--wrapper {
   background-color: rgb(8, 31, 48);
+  border-radius: 11px;
   display: inline-flex;
   min-height: 28vh;
   justify-content: center;
@@ -32,26 +34,44 @@ a:link, a:visited, a:active, a:visited {
   margin-bottom: 10vh;
   position: relative;
   top: 30px;
-  width: 80vw;
+  width: 50vw;
+}
+.passholder--wrapper {
+  background-color: rgb(8, 31, 48);
+  border-radius: 11px;
+  display: inline-flex;
+  min-height: 28vh;
+  justify-content: center;
+  padding: 3vh;
+  margin-bottom: 10vh;
+  position: relative;
+  top: 30px;
+  width: 30vw;
 }
 .data-table--wrapper {
-  width: 100%;
+  width: 80vw;
   display: block;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+  padding: 2vw;
+  border-radius: 11px;
+  background-color: #ffffff;
   text-align: center;
   position: relative;
-}
-.grid-cell {
-  display: inline-block;
-  text-align: center;
-  min-width: 25%;
-  position: relatve;
+	box-shadow: -20px 30px 116px 0 rgba(6, 122, 65, 0.48);
 }
 .pagination--wrapper {
-  display: inline-block;
+  display: block;
   text-align: right;
 }
 .heading--cell {
   width: 24.5%;
   display: inline-flex;
   justify-content: center;
+}
+.grid-cell {
+  display: inline-block;
+  text-align: center;
+  min-width: 25%;
+  position: relatve;
 }
