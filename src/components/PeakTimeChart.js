@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import IndegoData from '../data/indego.json'
-import { XAxis, YAxis, Tooltip, AreaChart, Area, ResponsiveContainer, Label } from 'recharts'
-import moment from 'moment'
+import { XAxis, Tooltip, AreaChart, Area, ResponsiveContainer } from 'recharts'
 import _ from 'lodash'
 import FormattedDuration from './FormattedDuration'
 import { formatDate } from './FormattedDate'

@@ -1,5 +1,6 @@
 import _ from 'lodash'
-import Griddle, { plugins, RowDefinition, ColumnDefinition } from 'griddle-react'
+import ReactTable from 'react-table'
+import 'react-table/react-table.css'
 import IndegoData from '../data/indego.json'
 import moment from 'moment'
 import React, { Component } from 'react'
@@ -8,29 +9,6 @@ import FormattedDate from './FormattedDate'
 
 class DataTable extends Component {
   render() {
-    const TableLayout = ({ Table, Pagination, Filter, SettingsWrapper }) => (
-      <section className="data-table--wrapper">
-        <span><Pagination /></span>
-        <Table />
-      </section>
-    );
-    const styleConfig = {
-      classNames: {
-        Row: 'row-class',
-        Cell: 'grid-cell',
-        Pagination: 'pagination--wrapper',
-        TableHeadingCell: 'heading--cell'
-      },
-      styles: {
-        Table: {
-          width: "80vw",
-          borderRadius: "11px",
-          paddingTop: "20px",
-          paddingBottom: "20px"
-        }
-      }
-    };
-    const sortProperties = [{ id: 'Number of Trips', sortAscending: false }];
     const withStartTime = _.map(IndegoData, function(trip) {
       trip.starting_hour = trip.start_time.substr(0, 13)
       return trip
@@ -52,21 +30,37 @@ class DataTable extends Component {
     });
 
     return (
-        <Griddle
-          components={{
-            Layout: TableLayout
-          }}
-          styleConfig={styleConfig}
+        <ReactTable
           data={peakTimeData}
-          plugins={[plugins.LocalPlugin]}
-          sortProperties={sortProperties}
-        >
-          <RowDefinition>
-            <ColumnDefinition id="Date" order={1} customComponent={FormattedDate} />
-            <ColumnDefinition id="Number of Trips" order={2} />
-            <ColumnDefinition id="Total Duration" order={3} customComponent={FormattedDuration} />
-          </RowDefinition>
-        </Griddle>
+          columns={[
+            {
+              Header: 'Date',
+              accessor: 'Date',
+              Cell: (row) => <FormattedDate value={row.value} />,
+              width: 200,
+              style: {
+                cursor: "pointer",
+                fontSize: 18,
+                padding: "10",
+                textAlign: "center",
+                userSelect: "none"
+              },
+            },
+            {
+              Header: 'Number of Trips',
+              accessor: 'Number of Trips',
+              width: 200
+            },
+            {
+              Header: 'Hours of Travel',
+              accessor: 'Total Duration',
+              width: 200,
+              Cell: (row) => <FormattedDuration value={row.value} />
+            }
+          ]}
+          defaultPageSize={10}
+          className="data-table--wrapper -highlight"
+        />
     );
   }
 }
