@@ -33,21 +33,25 @@ export default class PeakTimeChart extends Component {
       <div className="peak-time--wrapper">
         <div className="chart--heading">
           <h2>Peak Rides Per Hour</h2>
-          <h4>October 1-4, 2017</h4>
+          <h3>October 1-4, 2017</h3>
+          <h4 className="peaktime--summary">
+            <p>There were 462 Indego rides between 5pm and 6pm
+            on October 2nd, 2017.</p>
+          </h4>
         </div>
         <ResponsiveContainer>
           <AreaChart data={peakTimeData}
             margin={{top: 5, right: 30, left: 20, bottom: 5}}>
             <defs>
               <linearGradient id="colorTrips" x1="50%" y1="0%" x2="50%" y2="47.2217793%">
-                <stop stop-color="#1CF2F0" offset="0%" stopOpacity={.6}/>
-                <stop stop-color="#0CE18A" offset="100%" stopOpacity={0.8}/>
+                <stop stopColor="#1CF2F0" offset="0%" stopOpacity={.6}/>
+                <stop stopColor="#0CE18A" offset="100%" stopOpacity={0.8}/>
               </linearGradient>
             </defs>
             <defs>
               <radialGradient id="colorTrips2" cx="48.4470411%" cy="91.1412806%" fx="48.4470411%" fy="91.1412806%" r="293.718625%" gradientTransform="translate(0.484470,0.911413),scale(0.205460,1.000000),rotate(-167.489859),scale(1.000000,0.807806),translate(-0.484470,-0.911413)">
-                <stop stop-color="#D5BDEF" offset="0%" stopOpacity={0.8}></stop>
-                <stop stop-color="#B03DFF" offset="100%" stopOpacity={.6}></stop>
+                <stop stopColor="#D5BDEF" offset="0%" stopOpacity={0.8}></stop>
+                <stop stopColor="#B03DFF" offset="100%" stopOpacity={.6}></stop>
               </radialGradient>
             </defs>
             <XAxis dataKey="Date" stroke="#FFFFFF" tickMargin={10} tickFormatter={formatDate}  />

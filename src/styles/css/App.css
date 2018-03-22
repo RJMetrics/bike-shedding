@@ -92,7 +92,8 @@ h2 {
   font-family: "fabiolosmallcaplight", sans-serif; }
 
 h3 {
-  font-size: 1.375em; }
+  font-size: 1.375em;
+  color: white; }
 
 h4 {
   font-size: 1.125em; }
@@ -125,7 +126,8 @@ a:link, a:visited, a:active, a:focus {
   background-color: #36383e;
   box-shadow: -20px 30px 116px 0 rgba(34, 38, 77, 0.48);
   display: inline-flex;
-  height: 5vh;
+  height: 56px;
+  min-height: 50px;
   justify-content: center;
   margin: 0px;
   padding: 5px;
@@ -141,7 +143,7 @@ a:link, a:visited, a:active, a:focus {
   margin-top: 1vh; }
 
 .chart--heading {
-  color: #FFFFFF;
+  color: #fff59b;
   font-family: "fabiolosmallcaplight", sans-serif;
   height: 200px;
   left: 3.5vh;
@@ -170,6 +172,11 @@ a:link, a:visited, a:active, a:focus {
   top: 30px;
   width: 60vw; }
 
+.peaktime--summary {
+  color: #0CE18A;
+  font-family: "spartan_mblight", sans-serif;
+  font-size: .9em; }
+
 .passholder--wrapper {
   box-shadow: -20px 30px 116px 0 rgba(34, 38, 77, 0.48);
   background-color: #36383e;
@@ -189,6 +196,11 @@ a:link, a:visited, a:active, a:focus {
   height: 40vh;
   position: relative;
   top: 7vh; }
+
+.passholder--summary {
+  color: #83cdd7;
+  font-size: .9em;
+  font-family: "spartan_mblight", sans-serif; }
 
 .data-table--wrapper {
   box-shadow: -20px 30px 116px 0 rgba(34, 38, 77, 0.48);

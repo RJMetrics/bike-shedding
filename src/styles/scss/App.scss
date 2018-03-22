@@ -39,7 +39,7 @@ h2 {
   font-size: 1.75em;
   font-family: $chart-font;
 }
-h3 { font-size: 1.375em; }
+h3 { font-size: 1.375em; color: white; }
 h4 { font-size: 1.125em; }
 h5 { font-size: 1em; }
 h6 { font-size: .875em; }
@@ -66,7 +66,8 @@ a:link, a:visited, a:active, a:focus {
   background-color: #36383e;
   box-shadow: $deepshadow;
   display: inline-flex;
-  height: 5vh;
+  height: 56px;
+  min-height: 50px;
   justify-content: center;
   margin: 0px;
   padding: 5px;
@@ -82,7 +83,7 @@ a:link, a:visited, a:active, a:focus {
   margin-top: 1vh;
 }
 .chart--heading {
-  color: #FFFFFF;
+  color: #fff59b;
   font-family: $chart-font;
   height: 200px;
   left: 3.5vh;
@@ -111,6 +112,11 @@ a:link, a:visited, a:active, a:focus {
   top: 30px;
   width: 60vw;
 }
+.peaktime--summary {
+  color: #0CE18A;
+  font-family: $dashboard-font;
+  font-size: .9em;
+}
 .passholder--wrapper {
 	box-shadow: $deepshadow;
   background-color: #36383e;
@@ -130,6 +136,11 @@ a:link, a:visited, a:active, a:focus {
   height: 40vh;
   position: relative;
   top: 7vh;
+}
+.passholder--summary {
+  color: #83cdd7;
+  font-size: .9em;
+  font-family: $dashboard-font;
 }
 .data-table--wrapper {
 	box-shadow: $deepshadow;

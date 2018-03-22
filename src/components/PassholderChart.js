@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts'
+import { AreaChart, Area, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 import { formatDate, formatFullDate } from './FormattedDate'
 import { byPassholder } from '../utils/Queries'
 import { getPercent, toPercent } from '../utils/FindPercent'
@@ -31,7 +31,12 @@ export default class PassholderChart extends Component {
   render() {
     return (
       <div className="passholder--wrapper">
-      	<h2 className="chart--heading">Percentage of Riders by Passenger Type</h2>
+				<div className="chart--heading">
+	      	<h2>Percentage of Riders by Passenger Type</h2>
+					<h4 className="passholder--summary">
+						The majority of your riders held Indego30 passes.
+					</h4>
+				</div>
 				<div className="passholder--chart">
 					<ResponsiveContainer>
 	          <AreaChart width={600} height={400} data={byPassholder} stackOffset="expand"
@@ -49,6 +54,12 @@ export default class PassholderChart extends Component {
 								}}
 								content={<PassholderTooltipContent />}
 							/>
+							<Legend
+	              wrapperStyle={{
+	                color: "#FFFFFF",
+	                paddingTop: "10px"
+	              }}
+	            />
 	            <Area type='monotone' dataKey='Indego30' stackId="1" stroke='#83cdd7' fill='#83cdd7' />
 	            <Area type='monotone' dataKey='Walk-up' stackId="1" stroke='#49f188' fill='#49f188' />
 	            <Area type='monotone' dataKey='One Day Pass' stackId="1" stroke='#ffd686' fill='#ffd686' />
