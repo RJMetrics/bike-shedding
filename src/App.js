@@ -3,6 +3,7 @@ import PeakTimeChart from './components/PeakTimeChart'
 import PassholderChart from './components/PassholderChart'
 import Header from './components/Header'
 import DataTable from './components/DataTable'
+import Bike from './assets/img/whitebike.svg'
 import { pushRotate as Menu } from 'react-burger-menu'
 import React, { Component } from 'react'
 
@@ -56,7 +57,11 @@ class App extends Component {
             isOpen={false}
             minWidth={ '20%' }
             styles={ styles }>
-            <p>Item 1</p>
+            <img src={Bike} alt="Indego"/>
+            <p>Dashboard</p>
+            <p>User Analytics</p>
+            <p>Bicycle Stats</p>
+            <p>Tools</p>
           </Menu>
           <main id="page-wrap">
             <Header/>

@@ -1,7 +1,6 @@
 import _ from 'lodash'
 import ReactTable from 'react-table'
 import 'react-table/react-table.css'
-import IndegoData from '../data/indego.json'
 import moment from 'moment'
 import React, { Component } from 'react'
 import FormattedDuration from './FormattedDuration'
