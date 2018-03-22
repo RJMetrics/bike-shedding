@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="87px" viewBox="0 0 76 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>G</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0.25781251%" y1="49.7500002%" x2="81.9639009%" y2="66.6585286%" id="linearGradient-1">
+            <stop stop-color="#3023AE" offset="0%"></stop>
+            <stop stop-color="#53A0FD" offset="47.5247532%"></stop>
+            <stop stop-color="#B4EC51" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="G" fill="url(#linearGradient-1)" points="64.8 16.008 75.024 21.912 75.024 65.112 37.44 86.856 0 65.112 0 21.912 37.44 0.168 47.664 6.072 47.664 17.88 20.448 33.72 20.448 53.304 37.44 63.096 54.576 53.304 54.576 45.528 37.44 55.32 27.216 49.416 27.216 37.608"></polygon>
+    </g>
+</svg>

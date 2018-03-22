@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import IndegoData from '../data/indego.json'
-import { XAxis, Tooltip, AreaChart, Area, ResponsiveContainer } from 'recharts'
+import { XAxis, Tooltip, AreaChart, Area, Legend, ResponsiveContainer } from 'recharts'
 import _ from 'lodash'
 import FormattedDuration from './FormattedDuration'
 import { formatDate } from './FormattedDate'
@@ -51,18 +51,35 @@ export default class PeakTimeChart extends Component {
 
     return (
       <div className="peak-time--wrapper">
-        <ResponsiveContainer aspect={3}>
-          <AreaChart data={peakTimeData} margin={{top: 5, right: 30, left: 20, bottom: 5}}>
+        <h2 className="chart--heading">Peak Trip Time Summary</h2>
+        <ResponsiveContainer>
+          <AreaChart data={peakTimeData}
+            margin={{top: 5, right: 30, left: 20, bottom: 5}}>
             <defs>
               <linearGradient id="colorTrips" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#bdf4ba" stopOpacity={0.8}/>
                 <stop offset="95%" stopColor="#9bf5da" stopOpacity={0}/>
               </linearGradient>
             </defs>
-            <XAxis dataKey="Date" formatter={formatDate} />
-            <Tooltip content={<TooltipContent />} wrapperStyle={{ width: 100, backgroundColor: '#ccc', color: '#000000' }}/>
-            <Area type="monotone" dataKey="Number of Trips" stroke="#83d7be" fillOpacity={1} fill="url(#colorTrips)" activeDot={{r: 8}}/>
-            <Area type="monotone" dataKey="Total Duration" stroke="#9e2111" fillOpacity={1} fill="url(#colorTrips)" activeDot={{r: 8}}/>
+            <XAxis dataKey="Date" stroke="#FFFFFF" formatter={formatDate} />
+            <Tooltip
+              content={<TooltipContent />}
+              wrapperStyle={{
+                width: 100,
+                backgroundColor: '#ccc',
+                color: '#000000'
+              }}
+            />
+            <Legend
+              wrapperStyle={{
+                color: "#FFFFFF",
+                paddingTop: "10px"
+              }}
+              />
+            <Area type="monotone" dataKey="Number of Trips" stroke="#83d7be"
+              fillOpacity={1} fill="url(#colorTrips)" activeDot={{r: 1}}/>
+            <Area type="monotone" dataKey="Total Duration" stroke="#9e2111"
+              fillOpacity={1} fill="url(#colorTrips)" activeDot={{r: 8}}/>
           </AreaChart>
         </ResponsiveContainer>
       </div>

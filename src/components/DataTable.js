@@ -37,7 +37,6 @@ class DataTable extends Component {
               Header: 'Date',
               accessor: 'Date',
               Cell: (row) => <FormattedDate value={row.value} />,
-              width: 200,
               style: {
                 cursor: "pointer",
                 fontSize: 18,
@@ -49,12 +48,10 @@ class DataTable extends Component {
             {
               Header: 'Number of Trips',
               accessor: 'Number of Trips',
-              width: 200
             },
             {
-              Header: 'Hours of Travel',
+              Header: 'Time Traveled',
               accessor: 'Total Duration',
-              width: 200,
               Cell: (row) => <FormattedDuration value={row.value} />
             }
           ]}

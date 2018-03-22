@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import IndegoData from '../data/indego.json'
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
+import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts'
 import _ from 'lodash'
 import { formatDate } from './FormattedDate'
 
@@ -62,17 +62,18 @@ export default class PassholderChart extends Component {
 
     return (
       <div className="passholder--wrapper">
-        <AreaChart width={600} height={400} data={byPassholder} stackOffset="expand"
-              margin={{top: 10, right: 30, left: 0, bottom: 0}} >
-          <XAxis dataKey="Date" formatter={formatDate} />
-          <YAxis tickFormatter={toPercent}/>
-          <CartesianGrid strokeDasharray="3 3"/>
-          <Tooltip content={renderTooltipContent}/>
-          <Area type='monotone' dataKey='Indego30' stackId="1" stroke='#8884d8' fill='#8884d8' />
-          <Area type='monotone' dataKey='Walk-up' stackId="1" stroke='#82ca9d' fill='#82ca9d' />
-          <Area type='monotone' dataKey='One Day Pass' stackId="1" stroke='#ffc658' fill='#ffc658' />
-          <Area type='monotone' dataKey='IndegoFlex' stackId="1" stroke='#9c0ed5' fill='#9c0ed5' />
-        </AreaChart>
+        <ResponsiveContainer>
+          <AreaChart width={600} height={400} data={byPassholder} stackOffset="expand"
+                margin={{top: 10, right: 30, left: 0, bottom: 0}} >
+            <XAxis dataKey="Date" stroke="#FFFFFF" formatter={formatDate} />
+            <YAxis stroke="#FFFFFF" tickFormatter={toPercent}/>
+            <Tooltip content={renderTooltipContent}/>
+            <Area type='monotone' dataKey='Indego30' stackId="1" stroke='#8884d8' fill='#8884d8' />
+            <Area type='monotone' dataKey='Walk-up' stackId="1" stroke='#82ca9d' fill='#82ca9d' />
+            <Area type='monotone' dataKey='One Day Pass' stackId="1" stroke='#ffc658' fill='#ffc658' />
+            <Area type='monotone' dataKey='IndegoFlex' stackId="1" stroke='#9c0ed5' fill='#9c0ed5' />
+          </AreaChart>
+        </ResponsiveContainer>
       </div>
     )
   }
