@@ -13,9 +13,9 @@ const styles = {
   bmBurgerButton: {
     position: 'fixed',
     width: '36px',
-    height: '30px',
+    height: '19px',
     left: '36px',
-    top: '18px'
+    top: '2%'
   },
   bmBurgerBars: {
     background: '#B4EC51'
@@ -41,14 +41,14 @@ const styles = {
     padding: '0.8em'
   },
   bmOverlay: {
-    background: 'rgba(0, 0, 0, 0.3)'
+    background: 'rgba(0, 0, 0, 0.05)'
   }
 }
 class App extends Component {
   render() {
     return (
       <div id="outer-container">
-        <div className="App">
+        <div className="App scrollbar">
           <Menu
             pageWrapId={ "page-wrap" }
             outerContainerId={ "outer-container" }
@@ -56,7 +56,7 @@ class App extends Component {
             isOpen={false}
             minWidth={ '20%' }
             styles={ styles }>
-            <a href="/">Item 1</a>
+            <p>Item 1</p>
           </Menu>
           <main id="page-wrap">
             <Header/>

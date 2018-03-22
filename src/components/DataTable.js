@@ -6,14 +6,10 @@ import moment from 'moment'
 import React, { Component } from 'react'
 import FormattedDuration from './FormattedDuration'
 import FormattedDate from './FormattedDate'
+import { byStartTime } from '../utils/Queries'
 
 class DataTable extends Component {
   render() {
-    const withStartTime = _.map(IndegoData, function(trip) {
-      trip.starting_hour = trip.start_time.substr(0, 13)
-      return trip
-    });
-    const byStartTime = _.groupBy(withStartTime, 'starting_hour');
     const peakTimeData = _.map(byStartTime, function(trips, starting_hour) {
       let timestamp = moment(starting_hour).valueOf();
       let duration = _.sum(
@@ -24,7 +20,7 @@ class DataTable extends Component {
 
       return {
         "Date": timestamp,
-        "Number of Trips": trips.length,
+        "Number of Rides": trips.length,
         "Total Duration": duration
       }
     });
@@ -37,17 +33,10 @@ class DataTable extends Component {
               Header: 'Date',
               accessor: 'Date',
               Cell: (row) => <FormattedDate value={row.value} />,
-              style: {
-                cursor: "pointer",
-                fontSize: 18,
-                padding: "10",
-                textAlign: "center",
-                userSelect: "none"
-              },
             },
             {
-              Header: 'Number of Trips',
-              accessor: 'Number of Trips',
+              Header: 'Number of Rides',
+              accessor: 'Number of Rides',
             },
             {
               Header: 'Time Traveled',

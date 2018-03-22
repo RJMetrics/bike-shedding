@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import IndegoData from '../data/indego.json'
 import { XAxis, Tooltip, AreaChart, Area, Legend, ResponsiveContainer } from 'recharts'
-import _ from 'lodash'
 import FormattedDuration from './FormattedDuration'
-import { formatDate } from './FormattedDate'
+import FormattedDate, { formatDate } from './FormattedDate'
+import { peakTimeData } from '../utils/Queries'
 
-class TooltipContent extends Component {
+class PeakTimeTooltipContent extends Component {
   render() {
     const { active } = this.props;
 
@@ -16,10 +15,10 @@ class TooltipContent extends Component {
       const duration = payload[1].value;
 
       return(
-        <div className="tooltip">
-          Date: {date}<br />
-          Number of Trips: {trips}<br />
-          Total Duration: <FormattedDuration value={duration} />
+        <div className="chart--tooltip">
+          Date: <FormattedDate value={date} /><br />
+          Number of Rides: {trips}<br />
+          Total Time Traveled: <FormattedDuration value={duration} />
         </div>
       )
     }
@@ -30,56 +29,41 @@ class TooltipContent extends Component {
 
 export default class PeakTimeChart extends Component {
   render() {
-    const withStartTime = _.map(IndegoData, function(trip) {
-      trip.starting_hour = trip.start_time.substr(0, 13)
-      return trip
-    });
-    const byStartTime = _.groupBy(withStartTime, 'starting_hour');
-    const peakTimeData = _.map(byStartTime, function(trips, starting_hour) {
-      let date = formatDate(starting_hour);
-      let duration = _.sum(
-        _.map(trips, function(trip) {
-          return parseInt(trip.duration, 10) / 60;
-        })
-      );
-      return {
-        "Date": date,
-        "Number of Trips": trips.length,
-        "Total Duration": duration
-      }
-    });
-
     return (
       <div className="peak-time--wrapper">
-        <h2 className="chart--heading">Peak Trip Time Summary</h2>
+        <div className="chart--heading">
+          <h2>Peak Rides Per Hour</h2>
+          <h4>October 1-4, 2017</h4>
+        </div>
         <ResponsiveContainer>
           <AreaChart data={peakTimeData}
             margin={{top: 5, right: 30, left: 20, bottom: 5}}>
             <defs>
-              <linearGradient id="colorTrips" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#bdf4ba" stopOpacity={0.8}/>
-                <stop offset="95%" stopColor="#9bf5da" stopOpacity={0}/>
+              <linearGradient id="colorTrips" x1="50%" y1="0%" x2="50%" y2="47.2217793%">
+                <stop stop-color="#1CF2F0" offset="0%" stopOpacity={.6}/>
+                <stop stop-color="#0CE18A" offset="100%" stopOpacity={0.8}/>
               </linearGradient>
             </defs>
-            <XAxis dataKey="Date" stroke="#FFFFFF" formatter={formatDate} />
+            <defs>
+              <radialGradient id="colorTrips2" cx="48.4470411%" cy="91.1412806%" fx="48.4470411%" fy="91.1412806%" r="293.718625%" gradientTransform="translate(0.484470,0.911413),scale(0.205460,1.000000),rotate(-167.489859),scale(1.000000,0.807806),translate(-0.484470,-0.911413)">
+                <stop stop-color="#D5BDEF" offset="0%" stopOpacity={0.8}></stop>
+                <stop stop-color="#B03DFF" offset="100%" stopOpacity={.6}></stop>
+              </radialGradient>
+            </defs>
+            <XAxis dataKey="Date" stroke="#FFFFFF" tickMargin={10} tickFormatter={formatDate}  />
             <Tooltip
-              content={<TooltipContent />}
-              wrapperStyle={{
-                width: 100,
-                backgroundColor: '#ccc',
-                color: '#000000'
-              }}
+              content={<PeakTimeTooltipContent />}
             />
             <Legend
               wrapperStyle={{
                 color: "#FFFFFF",
                 paddingTop: "10px"
               }}
-              />
-            <Area type="monotone" dataKey="Number of Trips" stroke="#83d7be"
-              fillOpacity={1} fill="url(#colorTrips)" activeDot={{r: 1}}/>
-            <Area type="monotone" dataKey="Total Duration" stroke="#9e2111"
-              fillOpacity={1} fill="url(#colorTrips)" activeDot={{r: 8}}/>
+            />
+            <Area type="monotone" dataKey="Number of Rides" stroke="#0CE18A"
+              fillOpacity={1} fill="url(#colorTrips)" activeDot={{r: 0}}/>
+            <Area type="monotone" dataKey="Total Time Traveled" stroke="#B03DFF"
+              fillOpacity={1} fill="url(#colorTrips2)" activeDot={{r: 0}}/>
           </AreaChart>
         </ResponsiveContainer>
       </div>

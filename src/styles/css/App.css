@@ -1,37 +1,95 @@
+@font-face {
+  font-family: 'spartan_mblight';
+  src: url("../../assets/fonts/spartanmb-light-webfont.woff2") format("woff2"), url("../../assets/fonts/spartanmb-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'spartan_mbregular';
+  src: url("../../assets/fonts/spartanmb-regular-webfont.woff2") format("woff2"), url("../../assets/fonts/spartanmb-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'spartan_mbthin';
+  src: url("../../assets/fonts/spartanmb-thin-webfont.woff2") format("woff2"), url("../../assets/fonts/spartanmb-thin-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'spartan_mbextrabold';
+  src: url("../../assets/fonts/spartanmb-extra-bold-webfont.woff2") format("woff2"), url("../../assets/fonts/spartanmb-extra-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'spartan_mbsemibold';
+  src: url("../../assets/fonts/spartanmb-semibold-webfont.woff2") format("woff2"), url("../../assets/fonts/spartanmb-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'spartan_mbblack';
+  src: url("../../assets/fonts/spartanmb-black-webfont.woff2") format("woff2"), url("../../assets/fonts/spartanmb-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'spartan_mbbold';
+  src: url("../../assets/fonts/spartanmb-bold-webfont.woff2") format("woff2"), url("../../assets/fonts/spartanmb-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'fabiololight';
+  src: url("../../assets/fonts/fabiolo-light-webfont.woff2") format("woff2"), url("../../assets/fonts/fabiolo-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'fabioloregular';
+  src: url("../../assets/fonts/fabiolo-regular-webfont.woff2") format("woff2"), url("../../assets/fonts/fabiolo-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'fabiolosmallcaplight';
+  src: url("../../assets/fonts/fabiolosmallcap-light-webfont.woff2") format("woff2"), url("../../assets/fonts/fabiolosmallcap-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'fabiolosmallcapregular';
+  src: url("../../assets/fonts/fabiolosmallcap-regular-webfont.woff2") format("woff2"), url("../../assets/fonts/fabiolosmallcap-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 html, body {
-  margin: 0px;
-  padding: 0px;
+  background-color: #eff6ec;
   height: 100%;
-  width: 100%;
+  margin: 0px;
+  overflow: hidden;
+  padding: 0px;
   position: relative;
-  overflow-y: scroll;
-  overflow-x: hidden; }
-
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-  background-color: #F5F5F5; }
-
-::-webkit-scrollbar {
-  width: 6px;
-  background-color: #550b0b; }
-
-::-webkit-scrollbar-thumb {
-  background-color: #000000; }
+  width: 100%; }
 
 .App {
-  background-color: #dedede;
-  height: 100vh;
-  width: 100vw;
-  overflow-x: hidden;
-  font-family: "fabiolo-light", sans-serif;
+  font-family: "spartan_mblight", sans-serif;
   font-weight: 100;
-  font-size: 18px; }
+  height: 100vh;
+  overflow-x: hidden;
+  width: 100vw; }
+
+.scrollbar::-webkit-scrollbar {
+  width: 6px; }
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #36383e;
+  border-radius: 2px;
+  cursor: pointer;
+  overflow-y: visible;
+  width: 6px; }
+
+.scrollbar::-webkit-scrollbar-track {
+  background-color: #eff6ec;
+  width: 5px; }
 
 h1 {
-  font-size: 2.25em; }
+  font-size: 2em;
+  color: #FFFFFF; }
 
 h2 {
-  font-size: 1.75em; }
+  font-size: 1.75em;
+  font-family: "fabiolosmallcaplight", sans-serif; }
 
 h3 {
   font-size: 1.375em; }
@@ -46,79 +104,111 @@ h6 {
   font-size: .875em; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 .5em;
   font-weight: 500;
-  line-height: 1.1; }
+  line-height: 1.1;
+  margin: 0 0 .5em; }
 
 a:link, a:visited, a:active, a:focus {
-  color: red;
+  cursor: pointer;
   text-decoration: none;
-  cursor: pointer; }
+  outline: -webkit-focus-ring-color auto 0px; }
 
 .dashboard--wrapper {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  top: 30vh;
+  justify-content: center;
   padding-right: 6vh;
-  position: relative; }
+  position: relative;
+  top: 13vh; }
 
 .dashboard--header {
-  width: 98vw;
-  position: fixed;
-  z-index: 1;
-  margin: 1px;
-  top: -1px;
-  padding: 5px;
-  border: 1px solid black;
-  border-radius: 12px;
-  height: 5vh;
+  background-color: #36383e;
+  box-shadow: -20px 30px 116px 0 rgba(34, 38, 77, 0.48);
   display: inline-flex;
-  justify-content: flex-end;
-  background-color: #36383e; }
+  height: 5vh;
+  justify-content: center;
+  margin: 0px;
+  padding: 5px;
+  position: sticky;
+  top: -1px;
+  width: 100%;
+  z-index: 1; }
+
+.dashboard--title {
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 1vh; }
 
 .chart--heading {
-  left: 5vh;
   color: #FFFFFF;
+  font-family: "fabiolosmallcaplight", sans-serif;
+  height: 200px;
+  left: 3.5vh;
   position: absolute; }
 
+.chart--tooltip {
+  background-color: #05122a;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 1vh;
+  text-align: center;
+  width: 250; }
+
 .peak-time--wrapper {
+  box-shadow: -20px 30px 116px 0 rgba(34, 38, 77, 0.48);
   background-color: #36383e;
   border-radius: 11px;
   display: inline-flex;
-  min-height: 48vh;
+  font-family: "fabiolosmallcaplight", sans-serif;
   justify-content: center;
+  margin-bottom: 6vh;
+  min-height: 48vh;
   padding: 3vh;
-  margin-bottom: 10vh;
   position: relative;
   top: 30px;
-  width: 60vw;
-  box-shadow: -20px 30px 116px 0 rgba(34, 38, 77, 0.48); }
+  width: 60vw; }
 
 .passholder--wrapper {
+  box-shadow: -20px 30px 116px 0 rgba(34, 38, 77, 0.48);
   background-color: #36383e;
   border-radius: 11px;
-  display: inline-flex;
-  min-height: 38vh;
+  font-family: "fabiolosmallcaplight", sans-serif;
   justify-content: center;
-  padding: 3vh;
-  margin-bottom: 10vh;
+  margin-bottom: 12vh;
+  padding-bottom: 11vh;
+  padding-left: 2vw;
+  padding-right: 3vw;
+  padding-top: 4vh;
   position: relative;
-  top: 30px;
-  width: 60vw;
-  box-shadow: -20px 30px 116px 0 rgba(34, 38, 77, 0.48); }
+  top: 45px;
+  width: 58vw; }
+
+.passholder--chart {
+  height: 40vh;
+  position: relative;
+  top: 7vh; }
 
 .data-table--wrapper {
-  width: 60vw;
-  min-width: 40vw;
-  display: inline-block;
-  margin-top: 5vh;
-  margin-bottom: 10vh;
-  padding: 2vh;
-  border-radius: 11px;
+  box-shadow: -20px 30px 116px 0 rgba(34, 38, 77, 0.48);
   background-color: #ffffff;
-  text-align: center;
+  border-radius: 11px;
+  display: inline-block;
+  margin-bottom: 10vh;
+  margin-top: 5vh;
+  min-width: 40vw;
+  padding: 2vh;
   position: relative;
-  box-shadow: -20px 30px 116px 0 rgba(34, 38, 77, 0.48); }
+  text-align: center;
+  width: 60vw; }
+
+.ReactTable:hover, .ReactTable:focus {
+  text-decoration: none;
+  outline: none; }
+.ReactTable .rt-thead .rt-tr {
+  background-color: #36383e;
+  color: white;
+  border-radius: 12px; }
 
 /*# sourceMappingURL=App.css.map */

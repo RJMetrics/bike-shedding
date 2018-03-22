@@ -1,118 +1,157 @@
 @import 'Variables';
+@import 'Fonts';
 
 html, body {
-  margin: 0px;
-  padding: 0px;
+  background-color: rgb(239, 246, 236);
   height: 100%;
-  width: 100%;
+  margin: 0px;
+  overflow: hidden;
+  padding: 0px;
   position: relative;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  width: 100%;
 }
-
-::-webkit-scrollbar-track {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
-	background-color: #F5F5F5;
-}
-::-webkit-scrollbar {
-	width: 6px;
-	background-color: #550b0b;
-}
-::-webkit-scrollbar-thumb {
-	background-color: #000000;
-}
-
-
 .App {
-  background-color: rgb(222, 222, 222);
-  height: 100vh;
-  width: 100vw;
-  overflow-x: hidden;
-  font-family: $chart-font;
+  font-family: $dashboard-font;
   font-weight: 100;
-  font-size: 18px;
+  height: 100vh;
+  overflow-x: hidden;
+  width: 100vw;
 }
-
-h1 { font-size: 2.25em; }
-h2 { font-size: 1.75em; }
+.scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #36383e;
+  border-radius: 2px;
+  cursor: pointer;
+  overflow-y: visible;
+  width: 6px;
+}
+.scrollbar::-webkit-scrollbar-track {
+  background-color: rgb(239, 246, 236);
+  width: 5px;
+}
+h1 {
+  font-size: 2em;
+  color: #FFFFFF;
+}
+h2 {
+  font-size: 1.75em;
+  font-family: $chart-font;
+}
 h3 { font-size: 1.375em; }
 h4 { font-size: 1.125em; }
 h5 { font-size: 1em; }
 h6 { font-size: .875em; }
 
 h1,h2,h3,h4,h5,h6 {
-	margin: 0 0 .5em;
 	font-weight: 500;
 	line-height: 1.1;
+	margin: 0 0 .5em;
 }
 a:link, a:visited, a:active, a:focus {
-  color: red;
-  text-decoration: none;
   cursor: pointer;
+  text-decoration: none;
+  outline: -webkit-focus-ring-color auto 0px;
 }
 .dashboard--wrapper {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  top: 30vh;
+  justify-content: center;
   padding-right: 6vh;
   position: relative;
+  top: 13vh;
 }
 .dashboard--header {
-  width: 98vw;
-  position: fixed;
-  z-index: 1;
-  margin: 1px;
-  top: -1px;
-  padding: 5px;
-  border: 1px solid black;
-  border-radius: 12px;
-  height: 5vh;
-  display: inline-flex;
-  justify-content: flex-end;
   background-color: #36383e;
+  box-shadow: $deepshadow;
+  display: inline-flex;
+  height: 5vh;
+  justify-content: center;
+  margin: 0px;
+  padding: 5px;
+  position: sticky;
+  top: -1px;
+  width: 100%;
+  z-index: 1;
+}
+.dashboard--title {
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 1vh;
 }
 .chart--heading {
-  left: 5vh;
   color: #FFFFFF;
+  font-family: $chart-font;
+  height: 200px;
+  left: 3.5vh;
   position: absolute;
 }
+.chart--tooltip {
+  background-color: #05122a;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 1vh;
+  text-align: center;
+  width: 250;
+}
 .peak-time--wrapper {
+	box-shadow: $deepshadow;
   background-color: #36383e;
   border-radius: 11px;
   display: inline-flex;
-  min-height: 48vh;
+  font-family: $chart-font;
   justify-content: center;
+  margin-bottom: 6vh;
+  min-height: 48vh;
   padding: 3vh;
-  margin-bottom: 10vh;
   position: relative;
   top: 30px;
   width: 60vw;
-	box-shadow: -20px 30px 116px 0 rgba(34, 38, 77, 0.48);
 }
 .passholder--wrapper {
+	box-shadow: $deepshadow;
   background-color: #36383e;
   border-radius: 11px;
-  display: inline-flex;
-  min-height: 38vh;
+  font-family: $chart-font;
   justify-content: center;
-  padding: 3vh;
-  margin-bottom: 10vh;
+  margin-bottom: 12vh;
+  padding-bottom: 11vh;
+  padding-left: 2vw;
+  padding-right: 3vw;
+  padding-top: 4vh;
   position: relative;
-  top: 30px;
-  width: 60vw;
-	box-shadow: -20px 30px 116px 0 rgba(34, 38, 77, 0.48);
+  top: 45px;
+  width: 58vw;
+}
+.passholder--chart {
+  height: 40vh;
+  position: relative;
+  top: 7vh;
 }
 .data-table--wrapper {
-  width: 60vw;
-  min-width: 40vw;
-  display: inline-block;
-  margin-top: 5vh;
-  margin-bottom: 10vh;
-  padding: 2vh;
-  border-radius: 11px;
+	box-shadow: $deepshadow;
   background-color: #ffffff;
-  text-align: center;
+  border-radius: 11px;
+  display: inline-block;
+  margin-bottom: 10vh;
+  margin-top: 5vh;
+  min-width: 40vw;
+  padding: 2vh;
   position: relative;
-	box-shadow: -20px 30px 116px 0 rgba(34, 38, 77, 0.48);
+  text-align: center;
+  width: 60vw;
+}
+.ReactTable {
+  &:hover, &:focus {
+    text-decoration: none;
+    outline: none;
+  }
+  .rt-thead .rt-tr {
+    background-color: #36383e;
+    color: white;
+    border-radius: 12px;
+  }
 }
