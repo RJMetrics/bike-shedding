@@ -37,3 +37,5 @@ Use the sample data set provided in the data directory.
 Feel free to reach out to us for clarifications. 
 
 Thanks and good luck!
+# Candice's Submission
+Hello, I've added my files Indego.html, and Indego.Css. Please make sure when loading the files you save them to the same folder or update in the html the location of the Css file.  You can also view this project on Codepen https://codepen.io/thecarousel/pen/yKzMGJ.     Thank you!
