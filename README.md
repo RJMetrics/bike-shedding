@@ -25,14 +25,6 @@ Create a simple bike sharing data dashboard
 1. Use other languages that compile to javascript (Typescript, Coffeescript, Clojurescript, etc.)
 2. Use other languages that compile to css (LESS, Sass, etc.)
 
-### We will evaluate the project based on the following criteria
-1. Meeting the project requirements listed above
-2. Code quality
-3. Style and creativity
-
-Feel free to reach out to us for clarifications. 
-
-Thanks and good luck!
 
 _________________________________________________________________________________________________________
 
