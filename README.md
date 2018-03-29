@@ -1,9 +1,6 @@
 # bike-shedding
 Create a simple bike sharing data dashboard
 
-# Introduction
-Hi, thanks for your interest in our Front End Engineering position. As part of the interview process we'd like you to build a simple dashboard with Indego bike sharing data.
-
 # Steps
 1. Fork this repo to your personal GitHub profile
 2. Clone this repo to your computer
