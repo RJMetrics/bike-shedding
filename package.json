@@ -1,0 +1,32 @@
+{
+  "name": "bike-shedding",
+  "version": "1.0.0",
+  "description": "Create a simple bike sharing data dashboard",
+  "main": "index.js",
+  "scripts": {
+    "start": "node start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulkaspriskie/bike-shedding.git"
+  },
+  "bugs": {
+    "url": "https://github.com/paulkaspriskie/bike-shedding/issues"
+  },
+  "homepage": "https://github.com/paulkaspriskie/bike-shedding#readme",
+  "author": "Me",
+  "license": "ISC",
+  "devDependencies": {
+    "closure-builder": "^2.2.39",
+    "csvtojson": "^1.1.9",
+    "google-closure-compiler-js": "^20180204.0.0",
+    "node-sass": "^4.8.3",
+    "node-sass-watcher": "^0.5.1",
+    "open": "0.0.5",
+    "watch": "^1.0.2"
+  },
+  "dependencies": {
+    "chart.js": "^2.7.2",
+    "express": "^4.16.3"
+  }
+}
