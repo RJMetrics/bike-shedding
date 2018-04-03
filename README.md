@@ -34,6 +34,14 @@ Use the sample data set provided in the data directory.
 2. Code quality
 3. Style and creativity
 
-Feel free to reach out to us for clarifications. 
+### Instructions:
+> Install dependencies.
+```
+$ npm install
+```
+> Start dev server, open browser to port 3000, http://localhost:3000/. (should open app automatically in default browser.)
+```
+$ npm start  
+```
 
-Thanks and good luck!
+If you have any problems, let me know.
