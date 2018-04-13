@@ -1,69 +1,75 @@
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
-	--primary-color: #5470B6;
-	--secondary-color: #ccd4de;
-	--accent-color: #edae49;
-	--text-color: #575A5E;
-	--teal-color: #56ADB7;
-	--dark-background-color: #354052;
-	--light-background-color: #f4f4fa;
+  --primary-color: #5470B6;
+  --secondary-color: #ccd4de;
+  --accent-color: #edae49;
+  --text-color: #575A5E;
+  --teal-color: #56ADB7;
+  --dark-background-color: #354052;
+  --light-background-color: #f4f4fa;
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
-	background: var(--light-background-color);
-	color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  background: var(--light-background-color);
+  color: var(--text-color);
 }
 
 h1, h2, h3 {
-	font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', sans-serif;
 }
 
 h1 {
-	color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 h2 {
-	margin-top: 0.5em;
+  margin-top: 0.5em;
+}
+
+h3 {
+  font-size: 3em;
+  color: var(--primary-color);
+  text-align: center;
 }
 
 h2, h3, th {
-	color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 header {
-	background: var(--dark-background-color);
-	padding: 10px 20px;
+  background: var(--dark-background-color);
+  padding: 10px 20px;
 }
 
 .container {
-	margin-left: 2em;
-	margin-right: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 @media only screen and (min-width: 80em) {
-	.container {
-		max-width: 75em;
-		margin-left: auto;
-		margin-right: auto;
-	}
+  .container {
+    max-width: 75em;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .flex-horizontal {
-	display: flex;
-	flex-flow: row wrap;
+  display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
   width: 100%;
 }
 
 .flex-third,
 .flex-two-thirds {
-	flex: 1 0 100%;
-	position: relative;
-	max-width: 100%;
+  flex: 1 0 100%;
+  position: relative;
+  max-width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -81,29 +87,27 @@ header {
 }
 
 .module {
-	background: #fff;
-	padding: 20px;
-	margin-top: 40px;
-	border-top: 4px solid var(--teal-color);
+  background: #fff;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 4px solid var(--teal-color);
   box-shadow: 4px 4px 8px 0px rgba(53,64,82,0.05);
 }
 
 table {
-	width: 100%;
-	border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 th, td {
-	padding: 15px 5px;
+  padding: 15px 5px;
 }
 
 th {
-	text-align: left;
-	border-bottom: 2px solid #5470B6;
+  text-align: left;
+  border-bottom: 2px solid #5470B6;
 }
 
-.time {
-	font-size: 3em;
-	color: var(--primary-color);
-	text-align: center;
+tr:nth-child(even) {
+  background: var(--light-background-color);
 }
