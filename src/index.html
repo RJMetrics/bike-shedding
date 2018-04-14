@@ -6,6 +6,7 @@
 	<meta id="meta" name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Indego Bike Sharing App</title>
 	<link href="css/normalize.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Roboto:400,700" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 </head>
@@ -28,22 +29,25 @@
 		</div>
 		<div class="module">
 			<h2>Bike Share Rentals during <span class="time"></span></h2>
-			<table id="bikeTable">
-				<tr>
-					<th>Bike ID</th>
-					<th>Trip ID</th>
-					<th>Trip Duration</th>
-					<th>Start Time</th>
-					<th>End Time</th>
-					<th>Start Station</th>
-					<th>End Station</th>
-				</tr>
+			<table id="bikeRentals">
+				<thead>
+					<tr>
+						<th>Bike ID</th>
+						<th>Trip ID</th>
+						<th>Trip Duration</th>
+						<th>Start Time</th>
+						<th>End Time</th>
+						<th>Start Station</th>
+						<th>End Station</th>
+					</tr>
+				</thead>
 			</table>
 		</div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
 	<script src="js/bike-sharing.js"></script>
 
 </body>

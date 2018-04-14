@@ -68,6 +68,8 @@ var $hourData = $.getJSON('data/indego.json', function(response) {
                   return (value - 12) + "PM";
                 } else if (value == 12) {
                   return value + "PM";
+                } else if (value == 0) {
+                  return "12AM";
                 } else {
                   return value + "AM";
                 }
@@ -80,6 +82,12 @@ var $hourData = $.getJSON('data/indego.json', function(response) {
               labelString: 'Number of Bike Share Rides'
             }
           }]
+        },
+        layout: {
+          padding: {
+            left: 10,
+            right: 10
+          }
         }
       }
   });
@@ -146,22 +154,20 @@ var $hourData = $.getJSON('data/indego.json', function(response) {
     }
   });
 
-  // Create variable to hold HTML for bike data table
-  var tableHTML = '';
-
-  // Loop through each data ENTRY_, add HTML row to table
-  $.each(topHourTrips, function (index, trip) {
-    tableHTML += '<tr><td>' + trip.bike_id + '</td>';
-    tableHTML += '<td>' + trip.trip_id + '</td>';
-    tableHTML += '<td>' + trip.duration + '</td>';
-    tableHTML += '<td>' + trip.start_time + '</td>';
-    tableHTML += '<td>' + trip.end_time + '</td>';
-    tableHTML += '<td>' + trip.start_station + '</td>';
-    tableHTML += '<td>' + trip.end_station + '</td></tr>';
-  });
-
-  // Append table rows to table with ID of bikeTable
-  $("#bikeTable").append(tableHTML);
+  // Create 'Bike Share Rentals during topHour' table
+  $('#bikeRentals').DataTable( {
+    data: topHourTrips,
+    columns: [
+        { data: 'bike_id' },
+        { data: 'trip_id' },
+        { data: 'duration' },
+        { data: 'start_time' },
+        { data: 'end_time' },
+        { data: 'start_station' },
+        { data: 'end_station' }
+    ],
+    'searching': false
+} );
 
 }); 
 
