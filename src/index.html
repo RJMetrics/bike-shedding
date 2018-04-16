@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta id="meta" name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Indego Bike Sharing App</title>
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<link href="css/normalize.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Roboto:400,700" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<!-- jQuery in the header to prevent delay when loading page -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<h1>Indego Bike Sharing Data for Q4 2017</h1>
+		</div>
+	</header>
+	<div class="container">
+		<div class="flex-horizontal">
+			<div class="flex-two-thirds module">
+				<h2>Bike Share Rides by Time of Day</h2>
+				<!-- This will hold our 'Bike Share Rides by Time of Day' chart -->
+				<canvas id="lineChart" width="400" height="300"></canvas>
+			</div>
+			<div class="flex-third module">
+				<h2>What is the most popular time of day for bike sharing?</h2>
+				<!-- This will hold our 'Most Popular Time of Day' chart -->
+				<canvas id="timeChart" width="300" height="300"></canvas>
+				<img src="" class="time-icon" alt="">
+				<h3 class="time"></h3>
+			</div>
+		</div>
+		<div class="module module-last">
+			<h2>Bike Share Rentals during <span class="time"></span></h2>
+			<!-- This will hold our 'Bike Share Rentals during topHour' table -->
+			<table id="bikeRentals">
+				<thead>
+					<tr>
+						<th>Bike ID</th>
+						<th>Trip ID</th>
+						<th>Start Time</th>
+						<th>End Time</th>
+						<th>Trip Duration</th>
+						<th>Start Station</th>
+						<th>End Station</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+	<script src="js/bike-sharing.js"></script>
+</body>
+</html>
