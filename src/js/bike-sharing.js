@@ -1,3 +1,42 @@
+// Convert time from 24-hour format to 12-hour format
+function displayAmOrPm(hour) {
+  if (hour > 12) {
+    return (hour - 12) + "PM";
+  } else if (hour == 12) {
+    return hour + "PM";
+  } else if (hour == 0) {
+    return "12AM";
+  } else {
+    return hour + "AM";
+  }
+}
+
+// Determine image to show, based on time of day
+function displayTimeOfDayImage(hour) {
+  if (hour >= 5 && hour < 10) {
+    return "img/morning-icon.svg";
+  } else if (hour >= 10 && hour < 17) {
+    return "img/day-icon.svg";
+  } else if (hour >= 17 && hour < 20) {
+    return "img/evening-icon.svg";
+  } else {
+    return "img/night-icon.svg";
+  }
+}
+
+// Determine alt tag for image, based on time of day
+function displayTimeOfDayAlt(hour) {
+  if (hour >= 5 && hour < 10) {
+    return "Morning icon";
+  } else if (hour >= 10 && hour < 17) {
+    return "Day icon";
+  } else if (hour >= 17 && hour < 20) {
+    return "Evening icon";
+  } else {
+    return "Night icon";
+  }
+}
+
 // Retrieve data from json file
 var $chartsData = $.getJSON("data/indego.json", function(response) {
 
@@ -57,19 +96,21 @@ var $chartsData = $.getJSON("data/indego.json", function(response) {
         display: false
       },
       scales: {
-        ticks: {
-          callback: function(value, index, values) {
-            if (value > 12) {
-              return (value - 12) + "PM";
-            } else if (value == 12) {
-              return value + "PM";
-            } else if (value == 0) {
-              return "12AM";
-            } else {
-              return value + "AM";
+        xAxes: [{
+          ticks: {
+            callback: function(value, index, values) {
+              if (value > 12) {
+                return (value - 12) + "PM";
+              } else if (value == 12) {
+                return value + "PM";
+              } else if (value == 0) {
+                return "12AM";
+              } else {
+                return value + "AM";
+              }
             }
           }
-        }
+        }]
       }
     },
     layout: {
@@ -88,6 +129,18 @@ var $chartsData = $.getJSON("data/indego.json", function(response) {
 
   // Insert the most popular hour into our HTML for any element with the class .time
   $(".time").text(displayHour);
+
+  // Determine image to show, based on time of day
+  var timeImage = displayTimeOfDayImage(topHour);
+
+  // Determine alt tag to show, based on time of day
+  var timeImageAlt = displayTimeOfDayAlt(topHour);
+
+  // Insert image and alt tag into our HTML for the element with the class .time-icon
+  $(".time-icon").attr({
+    src: timeImage,
+    alt: timeImageAlt
+  });
 
   // Get the element we will use for our 'Most Popular Time of Day' chart
   var timeChart = document.getElementById("timeChart").getContext("2d");
@@ -148,26 +201,13 @@ var $chartsData = $.getJSON("data/indego.json", function(response) {
     columns: [
         { data: "bike_id" },
         { data: "trip_id" },
-        { data: "duration" },
         { data: "start_time" },
         { data: "end_time" },
+        { data: "duration" },
         { data: "start_station" },
         { data: "end_station" }
     ],
     "searching": false
   });
 
-}); 
-
-//Convert time from 24-hour format to 12-hour format
-function displayAmOrPm(hour) {
-  if (hour > 12) {
-    return (hour - 12) + "PM";
-  } else if (hour == 12) {
-    return hour + "PM";
-  } else if (hour == 0) {
-    return "12AM";
-  } else {
-    return hour + "AM";
-  }
-}
+});
