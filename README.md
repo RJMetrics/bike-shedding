@@ -39,9 +39,13 @@ Feel free to reach out to us for clarifications.
 Thanks and good luck!
 
 ### To view project locally
-1. Pull repository from https://github.com/mahulett/bike-shedding
-2. Navigate to file folder, start local dev server
+1. Clone repository locally from https://github.com/mahulett/bike-shedding
+2. Install dependencies
 ```
-$ node index.js
+$ npm install
 ```
-3. Open browser, navigate to http://localhost:3000/
+3. Start local dev server
+```
+$ npm start
+```
+4. Open browser, navigate to http://localhost:3000/

@@ -4,7 +4,7 @@
   "description": "Indego Bike Sharing Data for Q4 2017",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
     "sharing"
   ],
   "author": "Marguerite Hamilton",
-  "license": "ALv2",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/mahulett/bike-shedding/issues"
   },
