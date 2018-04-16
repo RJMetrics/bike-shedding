@@ -1,19 +1,19 @@
 // Retrieve data from json file
-var $hourData = $.getJSON('data/indego.json', function(response) {
+var $chartsData = $.getJSON("data/indego.json", function(response) {
 
   //Create array to hold the hour that each bike was rented for the 'Bike Share Rides by Time of Day' chart
-  var hours = [];
+  var tripHours = [];
 
   // Filter data from json file so we just have the hour each bike was rented
   $.each(response, function (index, trip) {
     var tripDate = new Date(trip.start_time);
-    var hour = tripDate.getHours();
-    hours.push(hour);
+    var tripHour = tripDate.getHours();
+    tripHours.push(tripHour);
   });
 
   // Count how many time bikes were rented per each hour of the day, store in object
-  var hoursCount = hours.reduce(function(sums, day) {
-    sums[day] = (sums[day] || 0) + 1;
+  var hoursCount = tripHours.reduce(function(sums, hour) {
+    sums[hour] = (sums[hour] || 0) + 1;
     return sums;
   },{});
 
@@ -27,69 +27,57 @@ var $hourData = $.getJSON('data/indego.json', function(response) {
   var topHour = hourCount.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0);
 
   // Get the element we will use for our 'Bike Share Rides by Time of Day' chart
-  var chart = document.getElementById("myChart").getContext('2d');
+  var lineChart = document.getElementById("lineChart").getContext("2d");
 
   // Apply styles to fonts for all charts so styles are consistent throughout dashboard
   Chart.defaults.global.defaultFontFamily = "'Roboto', sans-serif";
   Chart.defaults.global.defaultFontColor = "#575A5E";
 
   // Create gradient fill color for our chart
-  gradient = chart.createLinearGradient(0, 0, 0, 450);
-  gradient.addColorStop(0.000, 'rgba(85, 111, 181, 1.000)');
-  gradient.addColorStop(1.000, 'rgba(222, 246, 247, 1.000)');
+  var gradient = lineChart.createLinearGradient(0, 0, 0, 450);
+  gradient.addColorStop(0.000, "rgba(85, 111, 181, 1.000)");
+  gradient.addColorStop(1.000, "rgba(222, 246, 247, 1.000)");
 
   // Create 'Bike Share Rides by Time of Day' chart
-  var myLineChart = new Chart(chart, {
-      type: 'line',
-      data: {
-        labels: hourOfDay,
-        datasets: [{
-          label: 'Bike Share Rides',
-          backgroundColor: gradient,
-          data: hourCount
-        }]
+  var myLineChart = new Chart(lineChart, {
+    type: "line",
+    data: {
+      labels: hourOfDay,
+      datasets: [{
+        label: "Bike Share Rides",
+        backgroundColor: gradient,
+        data: hourCount
+      }]
+    },
+    options: {
+      animation: {
+        easing: "easeInOutQuart"
       },
-      options: {
-        animation: {
-          easing: 'easeInOutQuart'
-        },
-        legend: {
-          display: false
-        },
-        scales: {
-          xAxes: [{
-            scaleLabel: {
-              display: true,
-              labelString: 'Time of Day'
-            },
-            ticks: {
-              callback: function(value, index, values) {
-                if (value > 12) {
-                  return (value - 12) + "PM";
-                } else if (value == 12) {
-                  return value + "PM";
-                } else if (value == 0) {
-                  return "12AM";
-                } else {
-                  return value + "AM";
-                }
-              }
+      legend: {
+        display: false
+      },
+      scales: {
+        ticks: {
+          callback: function(value, index, values) {
+            if (value > 12) {
+              return (value - 12) + "PM";
+            } else if (value == 12) {
+              return value + "PM";
+            } else if (value == 0) {
+              return "12AM";
+            } else {
+              return value + "AM";
             }
-          }],
-          yAxes: [{
-            scaleLabel: {
-              display: true,
-              labelString: 'Number of Bike Share Rides'
-            }
-          }]
-        },
-        layout: {
-          padding: {
-            left: 10,
-            right: 10
           }
         }
       }
+    },
+    layout: {
+      padding: {
+        left: 10,
+        right: 10
+      }
+    }
   });
 
   // Calculate the remaining time from 12 to use as a second data point in the chart so we can create a cool visual representation of a clock!
@@ -98,51 +86,51 @@ var $hourData = $.getJSON('data/indego.json', function(response) {
   // Convert our most popoular hour from 24-hour format to 12-hour format for our clock
   var displayHour = displayAmOrPm(topHour);
 
-  // Insert the most popular hour into our HTML for anything with the class .time
+  // Insert the most popular hour into our HTML for any element with the class .time
   $(".time").text(displayHour);
 
   // Get the element we will use for our 'Most Popular Time of Day' chart
-  var timeChart = document.getElementById("timeChart").getContext('2d');
+  var timeChart = document.getElementById("timeChart").getContext("2d");
 
   // Create 'Most Popular Time of Day' chart
-  var myDoughnutChart = new Chart(timeChart, {
-      type: 'doughnut',
-      data: {
-        labels: ['Time'],
-        datasets: [{
-          label: 'Most Popular Hour',
-          backgroundColor: [
-            gradient,
-            'white'
-          ],
-          hoverBackgroundColor: [
-            gradient,
-            'white'
-          ],
-          hoverBorderColor: [
-            'white',
-            'white'
-          ],
-          data: [
-            topHour,
-            remainderHour
-          ]
-        }]
+  var myTimeChart = new Chart(timeChart, {
+    type: "doughnut",
+    data: {
+      labels: ["Time"],
+      datasets: [{
+        label: "Most Popular Hour",
+        backgroundColor: [
+          gradient,
+          "white"
+        ],
+        hoverBackgroundColor: [
+          gradient,
+          "white"
+        ],
+        hoverBorderColor: [
+          "white",
+          "white"
+        ],
+        data: [
+          topHour,
+          remainderHour
+        ]
+      }]
+    },
+    options: {
+      legend: {
+        display: false
       },
-      options: {
-        legend: {
-          display: false
-        },
-        tooltips: {
-          enabled: false
-        },
-        layout: {
-          padding: {
-            left: 30,
-            right: 30
-          }
+      tooltips: {
+        enabled: false
+      },
+      layout: {
+        padding: {
+          left: 30,
+          right: 30
         }
       }
+    }
   });
 
   // Filter data from our JSON file for the 'Bike Share Rentals during topHour' table
@@ -155,19 +143,19 @@ var $hourData = $.getJSON('data/indego.json', function(response) {
   });
 
   // Create 'Bike Share Rentals during topHour' table
-  $('#bikeRentals').DataTable( {
+  $("#bikeRentals").DataTable({
     data: topHourTrips,
     columns: [
-        { data: 'bike_id' },
-        { data: 'trip_id' },
-        { data: 'duration' },
-        { data: 'start_time' },
-        { data: 'end_time' },
-        { data: 'start_station' },
-        { data: 'end_station' }
+        { data: "bike_id" },
+        { data: "trip_id" },
+        { data: "duration" },
+        { data: "start_time" },
+        { data: "end_time" },
+        { data: "start_station" },
+        { data: "end_station" }
     ],
-    'searching': false
-} );
+    "searching": false
+  });
 
 }); 
 
@@ -175,7 +163,11 @@ var $hourData = $.getJSON('data/indego.json', function(response) {
 function displayAmOrPm(hour) {
   if (hour > 12) {
     return (hour - 12) + "PM";
+  } else if (hour == 12) {
+    return hour + "PM";
+  } else if (hour == 0) {
+    return "12AM";
   } else {
     return hour + "AM";
   }
-};
+}
