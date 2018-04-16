@@ -37,3 +37,11 @@ Use the sample data set provided in the data directory.
 Feel free to reach out to us for clarifications. 
 
 Thanks and good luck!
+
+### To view project locally
+1. Pull repository from https://github.com/mahulett/bike-shedding
+2. Navigate to file folder, start local dev server
+```
+$ node index.js
+```
+3. Open browser, navigate to http://localhost:3000/
