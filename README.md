@@ -37,3 +37,8 @@ Use the sample data set provided in the data directory.
 Feel free to reach out to us for clarifications. 
 
 Thanks and good luck!
+
+Steps to get up and running.
+do an npm install
+Then you should just be able to serve up bike-shedding directory from a server to see the results
+
