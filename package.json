@@ -1,0 +1,25 @@
+{
+  "name": "bike-shedding",
+  "version": "1.0.0",
+  "description": "bike share viz",
+  "main": "index.js",
+  "dependencies": {
+    "d3": "^5.1.0",
+    "highcharts": "^6.1.0",
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rjmetrics/bike-shedding.git"
+  },
+  "author": "Benjamin Kalk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rjmetrics/bike-shedding/issues"
+  },
+  "homepage": "https://github.com/rjmetrics/bike-shedding#readme"
+}

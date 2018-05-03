@@ -1,0 +1,758 @@
+[
+    {
+      "Station ID": 3000,
+      "Station Name": "Virtual Station",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3004,
+      "Station Name": "Municipal Services Building Plaza",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3005,
+      "Station Name": "Welcome Park, NPS",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3006,
+      "Station Name": "40th & Spruce",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3007,
+      "Station Name": "11th & Pine, Kahn Park",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3008,
+      "Station Name": "Temple University Station",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3009,
+      "Station Name": "33rd & Market",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3010,
+      "Station Name": "15th & Spruce",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3011,
+      "Station Name": "38th & Lancaster",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3012,
+      "Station Name": "21st & Catharine",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3013,
+      "Station Name": "6th & Fairmount",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3014,
+      "Station Name": "21st & Winter, Franklin Institute",
+      "Go live date": "4/23/2015",
+      "Status": "Inactive"
+    },
+    {
+      "Station ID": 3015,
+      "Station Name": "4th & Walnut, NPS",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3016,
+      "Station Name": "11th & Poplar, John F. Street Community Center",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3017,
+      "Station Name": "6th & Berks",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3018,
+      "Station Name": "12th & Filbert",
+      "Go live date": "4/29/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3019,
+      "Station Name": "6th & Race",
+      "Go live date": "4/29/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3020,
+      "Station Name": "University City Station",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3021,
+      "Station Name": "18th & JFK",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3022,
+      "Station Name": "Amtrak 30th Street Station",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3023,
+      "Station Name": "Rittenhouse Square",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3024,
+      "Station Name": "43rd & Chester, Clark Park",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3025,
+      "Station Name": "11th & Washington",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3026,
+      "Station Name": "2nd & South",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3027,
+      "Station Name": "40th Street Station, MFL",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3028,
+      "Station Name": "4th & Bainbridge",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3029,
+      "Station Name": "36th & Sansom",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3030,
+      "Station Name": "Darien & Catharine",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3031,
+      "Station Name": "13th & Montgomery",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3032,
+      "Station Name": "23rd & South",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3033,
+      "Station Name": "10th & Chestnut",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3034,
+      "Station Name": "11th & Reed",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3035,
+      "Station Name": "Dornsife Center",
+      "Go live date": "7/31/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3036,
+      "Station Name": "2nd & Germantown",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3037,
+      "Station Name": "Pennsylvania Convention Center",
+      "Go live date": "4/29/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3038,
+      "Station Name": "The Children's Hospital of Philadelphia (CHOP)",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3039,
+      "Station Name": "Broad & Girard",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3040,
+      "Station Name": "17th & Spring Garden, Community College of Philadelphia",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3041,
+      "Station Name": "Girard Station, MFL",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3043,
+      "Station Name": "18th & Fernon, Aquinas Center",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3045,
+      "Station Name": "13th & Locust",
+      "Go live date": "4/28/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3046,
+      "Station Name": "2nd & Market",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3047,
+      "Station Name": "Independence Mall, NPS",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3048,
+      "Station Name": "Broad & Fitzwater",
+      "Go live date": "4/23/2015",
+      "Status": "Inactive"
+    },
+    {
+      "Station ID": 3049,
+      "Station Name": "Foglietta Plaza",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3050,
+      "Station Name": "9th & Arch",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3051,
+      "Station Name": "23rd & Fairmount",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3052,
+      "Station Name": "9th & Locust",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3053,
+      "Station Name": "Point Breeze & Tasker",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3054,
+      "Station Name": "Rodin Museum",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3055,
+      "Station Name": "8th & Market",
+      "Go live date": "4/28/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3056,
+      "Station Name": "Broad & Oxford",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3057,
+      "Station Name": "Philadelphia Museum of Art",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3058,
+      "Station Name": "20th & Fairmount",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3059,
+      "Station Name": "Spring Garden Station, BSL",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3060,
+      "Station Name": "Free Library of Philadelphia - Central Library",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3061,
+      "Station Name": "23rd & Market",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3062,
+      "Station Name": "24th & Sansom",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3063,
+      "Station Name": "17th & Pine",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3064,
+      "Station Name": "18th & Washington, Chew Playground",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3065,
+      "Station Name": "Girard & Hutchinson",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3066,
+      "Station Name": "19th & Lombard",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3067,
+      "Station Name": "39th & Mt. Vernon, Mantua Haverford Community Center",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3068,
+      "Station Name": "Broad & Federal",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3069,
+      "Station Name": "4th & Christian",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3070,
+      "Station Name": "Spring Garden Station, MFL",
+      "Go live date": "4/29/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3071,
+      "Station Name": "32nd & Baring, Drexel Park",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3072,
+      "Station Name": "Front & Carpenter",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3073,
+      "Station Name": "9th & Spring Garden",
+      "Go live date": "4/28/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3074,
+      "Station Name": "44th & Walnut",
+      "Go live date": "4/28/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3075,
+      "Station Name": "Fairmount & Ridge",
+      "Go live date": "4/28/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3077,
+      "Station Name": "17th & Girard",
+      "Go live date": "4/29/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3078,
+      "Station Name": "19th & Market",
+      "Go live date": "4/23/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3086,
+      "Station Name": "Broad & Christian",
+      "Go live date": "6/10/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3088,
+      "Station Name": "3rd & Girard",
+      "Go live date": "10/20/2015",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3093,
+      "Station Name": "33rd & Diamond",
+      "Go live date": "4/28/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3095,
+      "Station Name": "29th & Diamond",
+      "Go live date": "4/28/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3096,
+      "Station Name": "29th & Dauphin",
+      "Go live date": "4/29/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3097,
+      "Station Name": "Berks Station, MFL",
+      "Go live date": "4/29/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3098,
+      "Station Name": "10th & Federal",
+      "Go live date": "5/2/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3099,
+      "Station Name": "4th & Washington",
+      "Go live date": "5/2/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3100,
+      "Station Name": "Moyamensing & Tasker",
+      "Go live date": "5/2/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3101,
+      "Station Name": "11th & South",
+      "Go live date": "5/2/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3102,
+      "Station Name": "26th & Pennsylvania",
+      "Go live date": "5/3/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3103,
+      "Station Name": "27th & Master, Athletic Recreation Center",
+      "Go live date": "5/3/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3104,
+      "Station Name": "34th & Mantua",
+      "Go live date": "5/3/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3105,
+      "Station Name": "Penn Treaty Park",
+      "Go live date": "5/3/2016",
+      "Status": "Inactive"
+    },
+    {
+      "Station ID": 3106,
+      "Station Name": "33rd & Dauphin",
+      "Go live date": "5/5/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3107,
+      "Station Name": "33rd & Reservoir",
+      "Go live date": "5/4/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3108,
+      "Station Name": "15th & Market",
+      "Go live date": "5/4/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3109,
+      "Station Name": "Parkside & Girard",
+      "Go live date": "5/6/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3110,
+      "Station Name": "Del. River Trail & Penn St.",
+      "Go live date": "5/4/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3111,
+      "Station Name": "Parkside & Belmont, Case Buildling",
+      "Go live date": "5/5/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3112,
+      "Station Name": "48th & Spruce",
+      "Go live date": "5/5/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3113,
+      "Station Name": "Philadelphia Zoo",
+      "Go live date": "5/6/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3114,
+      "Station Name": "22nd & Federal",
+      "Go live date": "5/5/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3115,
+      "Station Name": "19th & Girard, PTTI",
+      "Go live date": "5/4/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3117,
+      "Station Name": "ParkWest Town Center",
+      "Go live date": "4/15/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3118,
+      "Station Name": "46th Street Station, MFL",
+      "Go live date": "4/25/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3119,
+      "Station Name": "42nd & Lancaster",
+      "Go live date": "4/25/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3120,
+      "Station Name": "31st & Girard",
+      "Go live date": "4/26/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3121,
+      "Station Name": "26th & Poplar",
+      "Go live date": "4/26/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3122,
+      "Station Name": "24th & Cecil B. Moore, Cecil B. Moore Library",
+      "Go live date": "4/27/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3123,
+      "Station Name": "22nd & Cecil B. Moore",
+      "Go live date": "4/27/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3124,
+      "Station Name": "Race Street Pier",
+      "Go live date": "3/31/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3125,
+      "Station Name": "15th & South",
+      "Go live date": "4/8/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3129,
+      "Station Name": "The Children's Hospital of Philadelphia, East Service Drive",
+      "Go live date": "5/24/2016",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3150,
+      "Station Name": "15th & Castle, DiSilvestro Playground",
+      "Go live date": "6/7/2017",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3152,
+      "Station Name": "40th & Woodland, Trolley Portal",
+      "Go live date": "6/5/2017",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3153,
+      "Station Name": "Thompson & Palmer, Adaire School",
+      "Go live date": "6/7/2017",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3154,
+      "Station Name": "12th & Callowhill",
+      "Go live date": "6/7/2017",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3156,
+      "Station Name": "20th & Market",
+      "Go live date": "6/8/2017",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3157,
+      "Station Name": "8th & Mifflin, Bok Building",
+      "Go live date": "6/8/2017",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3158,
+      "Station Name": "Passyunk & Broad",
+      "Go live date": "6/8/2017",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3159,
+      "Station Name": "38th & Spruce",
+      "Go live date": "6/6/2017",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3160,
+      "Station Name": "38th & Market",
+      "Go live date": "6/6/2017",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3161,
+      "Station Name": "30th Street Station East",
+      "Go live date": "6/6/2017",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3162,
+      "Station Name": "27th & South",
+      "Go live date": "6/9/2017",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3163,
+      "Station Name": "25th & Locust",
+      "Go live date": "6/9/2017",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3170,
+      "Station Name": "Grays Ferry & Pemberton",
+      "Go live date": "6/5/2017",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3155,
+      "Station Name": "7th & Fitzwater",
+      "Go live date": "9/26/2017",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3164,
+      "Station Name": "12th & Passyunk",
+      "Go live date": "9/26/2017",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3169,
+      "Station Name": "2nd & Race",
+      "Go live date": "9/27/2017",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3165,
+      "Station Name": "24th & Race, Schuylkill River Trail",
+      "Go live date": "9/27/2017",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3168,
+      "Station Name": "20th & Sansom",
+      "Go live date": "12/13/2017",
+      "Status": "Active"
+    },
+    {
+      "Station ID": 3116,
+      "Station Name": "Barnes Foundation",
+      "Go live date": "12/14/2017",
+      "Status": "Active"
+    }
+  ]
