@@ -7,7 +7,6 @@ Create a simple bike sharing data dashboard
 3. Visit [Indego's ride sharing data](https://www.rideindego.com/about/data/) site and download one of the datasets
 4. Use front end web technologies to build a chart and answer a question about the data
 5. Add to the bottom of this README file details what needs to be done to view your project locally
-6. Make a pull request for us to review your code
 
 _________________________________________________________________________________________________________
 
