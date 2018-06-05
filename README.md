@@ -9,23 +9,6 @@ Create a simple bike sharing data dashboard
 5. Add to the bottom of this README file details what needs to be done to view your project locally
 6. Make a pull request for us to review your code
 
-### Your project should
-1. Load data via an asynchronous request in a web browser using javascript
-2. Display a visual chart displaying the data or an aggregation of the data
-3. Display some or all of the raw data in a table
-4. Have 2 or more ways you can interact with the data (ie. hover, click, etc.)
-5. Be viewable in the latest versions of Chrome and Firefox
-6. Display a question about the data that your chart tries to answer
-
-### You should
-1. Use any javascript libraries or frameworks you want
-2. Write some or all of your own html/css
-
-### It's not required, but your project can
-1. Use other languages that compile to javascript (Typescript, Coffeescript, Clojurescript, etc.)
-2. Use other languages that compile to css (LESS, Sass, etc.)
-
-
 _________________________________________________________________________________________________________
 
 # Get Started
